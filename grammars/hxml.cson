@@ -1,0 +1,18 @@
+'fileTypes': [
+  'hxml'
+]
+'name': 'hxml Haxe Build File'
+'patterns': [
+  {
+    'match': '(-cpp?|-js|-as3|-swf-header|-swf-version|swf-lib|-swf9|-swf|-neko|-php|-xml|-x|-main|-lib|-D|-resource|-exclude|-v|-debug|-prompt|-cmd|--flash-strict|--no-traces|--flash-use-stage|--neko-source|--gen-hx-classes|--next|--display|--no-output|--times|--no-inline|--no-opt|--php-front|--remap|-help|--help|--interp|--macro|--dead-code-elimination|--js-modern|--wait|--connect|--cwd)'
+    'name': 'keyword.other.hxml'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.actionscript'
+    'match': '(#).*$\\n?'
+    'name': 'comment.line.number-sign.hxml'
+  }
+]
+'scopeName': 'source.hxml'

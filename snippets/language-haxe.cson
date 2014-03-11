@@ -1,0 +1,84 @@
+'.source.hxml':
+  'enable build preview in html':
+    'prefix': 'pre'
+    'body': '# @tm-preview'
+  'insert additional preview html':
+    'prefix': 'html'
+    'body': '# @tm-html'
+  'add html preview div':
+    'prefix': 'div'
+    'body': '# @tm-html <div id="$1"></div>'
+  'add html preview script':
+    'prefix': 'script'
+    'body': '# @tm-html <script type="text/javascript" src="$1"></script>'
+  'all targets hxml':
+    'prefix': 'all'
+    'body': '\n# swf 8\n-main $1\n-cp $2\n-swf bin/$1.8.swf\n\n--next\n\n# swf 9\n-main $1\n-cp $2\n-swf9 bin/$1.9.swf\n\n--next\n\n# js\n-main $1\n-cp $2\n-js bin/$1.js\n\n--next\n\n# php\n-main $1\n-cp $2\n-php bin/$1\n-cmd echo "==========<PHP>=========="\n-cmd php bin/$1/index.php\n-cmd echo "==========</PHP>=========="\n\n--next\n\n# neko\n-main $1\n-cp $2\n-neko bin/$1.n\n-cmd echo "==========<NEKO>=========="\n-cmd neko bin/$1.n\n-cmd echo "==========</NEKO>=========="\n\n--next \n\n# cpp\n-main $1\n-cp $2\n-cpp bin/$1\n-cmd echo "==========<CPP>=========="\n-cmd bin/$1/$1\n-cmd echo "==========</CPP>=========="\n\n\n# @tm-preview'
+  'cpp hxml':
+    'prefix': 'cpp'
+    'body': '-main $1\n-cp $2\n-cpp bin/$1\n#-cmd bin/$1/$1'
+  'designate hxml autocompletion section':
+    'prefix': 'auto'
+    'body': '# @tm-autocomplete'
+  'js hxml':
+    'prefix': 'js'
+    'body': '-main $1\n-cp $3\n-js bin/$1.js\n# try using preview here: "pre<TAB>"\n'
+  'neko hxml':
+    'prefix': 'neko'
+    'body': '-main $1\n-cp $3\n-neko bin/$1.n\n#-cmd neko bin/$1.n\n'
+  'php hxml':
+    'prefix': 'php'
+    'body': '-main $1\n-cp $3\n-php bin/$1\n# cmd php bin/$1/index.php\n'
+  'swf hxml':
+    'prefix': 'swf'
+    'body': '-main $1\n-cp $2\n-swf${3:9} bin/$1.swf\n#-cmd open bin/$1.swf\n# try using preview here: "pre<TAB>"'
+'.source.haxe.2':
+  'HaXe library copyright':
+    'prefix': '(c)'
+    'body': '/*\n * Copyright (c) 2010, The haXe Project Contributors\n * All rights reserved.\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions are met:\n *\n *   - Redistributions of source code must retain the above copyright\n *     notice, this list of conditions and the following disclaimer.\n *   - Redistributions in binary form must reproduce the above copyright\n *     notice, this list of conditions and the following disclaimer in the\n *     documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE HAXE PROJECT CONTRIBUTORS "AS IS" AND ANY\n * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n * DISCLAIMED. IN NO EVENT SHALL THE HAXE PROJECT CONTRIBUTORS BE LIABLE FOR\n * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\n * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\n * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH\n * DAMAGE.\n */\n'
+  'class':
+    'prefix': 'class'
+    'body': 'class $1 ${2:extends ${3:Parent}, }${4:implements ${5:Interface} }{\n\t${6:public function new($7){\n\t\t$8\n\t\\}}\n\t${9:public static function main(){\n\t\t${10}\n\t\\}}\n}'
+  'descriptive trace':
+    'prefix': 'desc'
+    'body': 'trace(Std.string($1) + " was the value for $1"); '
+  'for':
+    'prefix': 'for'
+    'body': 'for ($1 in $2){\n\t$3\n}\n\n'
+  'function':
+    'prefix': 'fun'
+    'body': 'function ${1:name}($2) ${3:: Void} {\n\t$0\n}\n'
+  'interface':
+    'prefix': 'in'
+    'body': 'interface $1 ${2:implements ${3:Parent} }{\n\t$0\n}'
+  'javadoc block comment':
+    'prefix': '/**'
+    'body': '/**\n *  $0\n **/'
+  'macro class':
+    'prefix': 'macro'
+    'body': '@:macro class $1}{\n\t${2:public static function main(){\n\t\t${3}\n\t\\}}\n}'
+  'macro function':
+    'prefix': 'macro'
+    'body': '@:macro public static function ${1:name}(${2:e:haxe.macro.Expr}) : haxe.macro.Expr {\n\t$0\n}\n'
+  'main':
+    'prefix': 'main'
+    'body': 'public static main() : Void {\n\t$0\n}'
+  'method':
+    'prefix': 'meth'
+    'body': '${1:inline} ${2:private} ${3:public} ${4:static} function ${5:name}($6) ${7:: Void} {\n\t$0\n}\n'
+  'private function':
+    'prefix': 'prifu'
+    'body': 'private function $1($2):$3 {\n\t$0\n}'
+  'private static function':
+    'prefix': 'pristafu'
+    'body': 'private static function $1($2):$3 {\n\t$0\n}'
+  'public function':
+    'prefix': 'pufu'
+    'body': 'public function $1($2):$3 {\n\t$0\n}'
+  'public static function':
+    'prefix': 'pustafu'
+    'body': 'public static function $1($2):$3 {\n\t$0\n}'
+'.text.xml':
+  'HaXeLib Stub':
+    'prefix': 'haxelib'
+    'body': '<project name="${1:myproject}" url="${2:http://myproject.org}" license="${3:GPL}">\n    <user name="${4:mylogin}"/>\n    ${5:<tag v="${6:flash}"/>}\n    <description>${7:This project is an example of an haxelib project}</description>\n    <version name="0.1">${8:Initial release, everything is working correctly}</version>\n</project>'

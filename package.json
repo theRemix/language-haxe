@@ -1,0 +1,12 @@
+{
+  "name": "language-haxe",
+  "version": "0.0.0",
+  "description": "Haxe language support in Atom",
+  "repository": "https://github.com/atom/language-haxe",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
