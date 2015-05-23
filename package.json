@@ -5,7 +5,7 @@
   "repository": "https://github.com/theRemix/language-haxe.git",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=0.185.0 <2.0.0"
   },
   "dependencies": {}
 }
