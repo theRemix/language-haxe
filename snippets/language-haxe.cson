@@ -100,6 +100,7 @@
     'body': '-xml ${1:file}'
 
 '.source.haxe':
+
   'main class':
     'prefix': 'class'
     'body': 'class ${1:Class}\n\{\n\n\tpublic function new()\n\t\{\n\t\t$0\n\t\}\n\n\tpublic static function main()\n\t\{\n\t\tnew ${2:Class}();\n\t\}\n\}'

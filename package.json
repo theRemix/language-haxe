@@ -1,6 +1,6 @@
 {
   "name": "language-haxe",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Haxe language support in Atom",
   "repository": "https://github.com/theRemix/language-haxe.git",
   "license": "MIT",
