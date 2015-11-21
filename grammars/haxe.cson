@@ -565,6 +565,14 @@
       {
         'include': '#storage'
       }
+      {
+        'captures':
+          '1':
+            'name': 'entity.name.type.package.haxe'
+          '2':
+            'name': 'entity.name.type.class.haxe'
+        'match':  '(\\b(([a-z][a-zA-Z0-9]*\\.)*)([A-Z]\\w*|\\*))'
+      }
     ]
   'regex':
     'patterns': [
@@ -575,6 +583,10 @@
     ]
   'storage':
     'patterns': [
+      {
+        'match': '((@:)(abstract|access|allow|annotation|arrayAccess|autoBuild|bind|bitmap|build|buildXml|classCode|commutative|compilerGenerated|coreApi|coreType|cppFileCode|cppNamespaceCode|dce|debug|decl|defParam|delegate|depend|deprecated|event|expose|extern|fakeEnum|file|final|font|forward|from|functionCode|functionTailCode|generic|genericBuild|getter|hack|headerCode|headerNamespaceCode:|hxGen|ifFeature|include|initPackage|internal|isVar|keep|keepInit|keepSub|macro|meta|multiType|native|nativeGen|noCompletion|noDebug|noDoc|noImportGlobal|noPackageRestrict|noStack|noUsing|notNull|ns|op|optional|overload|privateAccess|property|protected|public|publicFields|readOnly|remove|require|rtti|runtime|runtimeValue|setter|sound|struct|suppressWarnings|throws|to|transient|unbound|unifyMinDynamic|unreflective|unsafe|usage|volatile)\\b)'
+        'name': 'storage.modifier.macro.haxe'
+      }
       {
         'match': '\\b(public|private|static|dynamic|inline|extern|typedef|override)\\b'
         'name': 'storage.modifier.haxe'
