@@ -49,6 +49,7 @@
       '--wait'
       '--connect'
       '--cwd'
+      '--each'
     ]
 '.source.hx':
   'editor':

@@ -6,7 +6,7 @@
 'name': 'Haxe Build File'
 'patterns': [
   {
-    'match': '(-cp|-js|-swf|-as3|-neko|-php|-cpp|-cs|-java|-python|-xml|-main|-lib|-D|-v|-debug|-dce|-swf-version|-swf-header|-swf-lib|-swf-lib-extern|-java-lib|-net-lib|-net-std|-c-arg|-x|-resource|-prompt|-cmd|--flash-strict|--no-traces|--gen-hx-classes|--next|--each|--display|--no-output|--times|--no-inline|--no-opt|--php-front|--php-lib|--php-prefix|--remap|--interp|--macro|--eval|--wait|--connect|--cwd|-version|--help-defines|--help-metas|-help|--help)'
+    'match': '(-cp|-js|-swf|-as3|-neko|-php|-cpp|-cs|-java|-python|-xml|-main|-lib|-D|-v|-debug|-dce|-swf-version|-swf-header|-swf-lib|-swf-lib-extern|-java-lib|-net-lib|-net-std|-c-arg|-x|-resource|-prompt|-cmd|--flash-strict|--no-traces|--gen-hx-classes|--next|--each|--display|--no-output|--times|--no-inline|--no-opt|--php-front|--php-lib|--php-prefix|--remap|--interp|--macro|--eval|--wait|--connect|--cwd|-version|--help-defines|--help-metas|-help|--help|--each)'
     'name': 'keyword.compiler.arguments.hxml'
   }
   {
