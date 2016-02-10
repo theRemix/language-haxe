@@ -1,10 +1,4 @@
 '.source.hxml':
-  'hxml --altfmt':
-    'prefix': 'alt'
-    'body': '--altfmt'
-  'hxml --auto-xml':
-    'prefix': 'ax'
-    'body': '--auto-xml'
   'hxml --display':
     'prefix': 'dis'
     'body': '--display'
@@ -56,9 +50,6 @@
   'hxml --each':
     'prefix': 'e'
     'body': '--each'
-  'hxml -exclude':
-    'prefix': 'ex'
-    'body': '-exclude ${1:file}'
   'hxml -help':
     'prefix': 'h'
     'body': '-help'
