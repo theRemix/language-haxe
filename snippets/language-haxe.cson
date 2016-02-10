@@ -47,7 +47,7 @@
   'hxml -debug':
     'prefix': 'deb'
     'body': '-debug'
- 'hxml --each':
+  'hxml --each':
     'prefix': 'e'
     'body': '--each'
   'hxml -help':
