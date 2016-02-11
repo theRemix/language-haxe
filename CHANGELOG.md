@@ -1,4 +1,7 @@
 
+## 0.3.1
+* Hxml: --each grammer
+
 ## 0.3.0
 * Updated settings/language-haxe.cson path for compatibility with atom api 1.0
 
