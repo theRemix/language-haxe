@@ -1,10 +1,10 @@
-'comment': 'Haxe Syntax: version 3.1.1'
+'comment': 'Haxe Syntax: version 3.2.1'
 'fileTypes': [
-  'hx'
+    'hx'
 ]
 'foldingStartMarker': '(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{|#if)'
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$|#end)'
-'name': 'Haxe3'
+'name': 'Haxe'
 'patterns': [
   {
     'include': '#comments'
@@ -37,7 +37,7 @@
     'include': '#field-completions'
   }
   {
-    'match': '#(if|else|elseif|end)\\b'
+    'match': '#(if|else|elseif|end|error)\\b'
     'name': 'keyword.preprocessor.macro.haxe'
   }
   {
@@ -360,7 +360,7 @@
         'name': 'storage.type.typedef.haxe'
       '2':
         'name': 'entity.name.type.class.haxe'
-    'match': '\\b(typedef)\\s+([a-zA-Z_]\\w*)\\s*='
+    'match': '\\b(typedef)\\s+([A-Z][a-zA-Z_]\\w*)\\s*='
     'name': 'meta.typedef.haxe'
   }
   {
@@ -379,7 +379,7 @@
             'name': 'storage.modifier.class.haxe'
           '4':
             'name': 'entity.name.type.class.haxe'
-        'match': '(?x)\n                                (\\b(class|enum|interface)|\\b(implements|extends))\n                                \\s+(([a-z]+.)*[A-Z]\\w*)'
+        'match': '(?x)\n                                (\\b(abstract|class|enum|interface)|\\b(implements|extends))\n                                \\s+(([a-z]+.)*[A-Z]\\w*)'
       }
     ]
   'comments':
@@ -559,7 +559,7 @@
         'name': 'support.variable.magic.haxe'
       }
       {
-        'match': '\\b(Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|EReg|Enum|Float|Hash|Int|IntHash|IntIter|Iterable|Iterator|Lambda|List|Math|Null|Reflect|Std|String|StringBuf|StringTools|Type|UInt|ValueType|Void|Xml|XmlType|TBool|TInt|TFloat|TFunction|TObject|TEnum|TClass|TNull|TUnknown)\\b'
+        'match': '\\b(Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|EReg|Enum|EnumValue|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|Math|Null|Reflect|Single|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType|TBool|TInt|TFloat|TFunction|TObject|TEnum|TClass|TNull|TUnknown)\\b'
         'name': 'support.class.haxe'
       }
       {
@@ -584,11 +584,11 @@
   'storage':
     'patterns': [
       {
-        'match': '((@:)(abstract|access|allow|annotation|arrayAccess|autoBuild|bind|bitmap|build|buildXml|classCode|commutative|compilerGenerated|coreApi|coreType|cppFileCode|cppNamespaceCode|dce|debug|decl|defParam|delegate|depend|deprecated|event|expose|extern|fakeEnum|file|final|font|forward|from|functionCode|functionTailCode|generic|genericBuild|getter|hack|headerCode|headerNamespaceCode:|hxGen|ifFeature|include|initPackage|internal|isVar|keep|keepInit|keepSub|macro|meta|multiType|native|nativeGen|noCompletion|noDebug|noDoc|noImportGlobal|noPackageRestrict|noStack|noUsing|notNull|ns|op|optional|overload|privateAccess|property|protected|public|publicFields|readOnly|remove|require|rtti|runtime|runtimeValue|setter|sound|struct|suppressWarnings|throws|to|transient|unbound|unifyMinDynamic|unreflective|unsafe|usage|volatile)\\b)'
+        'match': '((@:)(abi|abstract|access|allow|analyzer|annotation|arrayAccess|autoBuild|bind|bitmap|build|buildXml|callable|classCode|commutative|compilerGenerated|coreApi|coreType|cppFileCode|cppNamespaceCode|dce|debug|decl|defParam|delegate|depend|deprecated|event|expose|extern|fakeEnum|file|final|font|forward|from|functionCode|functionTailCode|generic|genericBuild|getter|hack|headerClassCode|headerCode|headerNamespaceCode:|hxGen|ifFeature|include|initPackage|internal|isVar|javaCanonical|jsRequire|keep|keepInit|keepSub|macro|mergeBlock|meta|multiType|native|nativeChildren|nativeGen|nativeProperty|noCompletion|noDebug|noDoc|noImportGlobal|noPrivateAccess|noStack|noUsing|nonVirtual|notNull|ns|op|optional|overload|privateAccess|property|protected|public|publicFields|pythonImport|readOnly|remove|require|rtti|runtime|runtimeValue|setter|sound|sourceFile|strict|struct|structAccess|suppressWarnings|throws|to|transient|unbound|unifyMinDynamic|unreflective|unsafe|usage|value|void|volatile)\\b)'
         'name': 'storage.modifier.macro.haxe'
       }
       {
-        'match': '\\b(public|private|static|dynamic|inline|extern|typedef|override)\\b'
+        'match': '\\b(public|private|static|dynamic|inline|extern|typedef|override|macro)\\b'
         'name': 'storage.modifier.haxe'
       }
       {
