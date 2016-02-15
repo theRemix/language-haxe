@@ -1,9 +1,5 @@
 '.source.haxe':
 
-  'main class':
-    'prefix': 'class'
-    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${2:Class}();\n\t\}\n\}'
-
   'trace':
     'prefix': 'trace'
     'body': 'trace( $1 );$0'
@@ -97,6 +93,10 @@
   'macro function':
     'prefix': 'macro'
     'body': 'macro public static function ${1:name}( ${2:e : haxe.macro.Expr} ) : haxe.macro.Expr \{\n\t$0\n\}'
+
+  'main class':
+    'prefix': 'class'
+    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${2:Class}();\n\t\}\n\}'
 
   'for var in 0...end':
     'prefix': 'fori'
