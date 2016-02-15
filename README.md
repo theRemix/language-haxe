@@ -1,6 +1,6 @@
 # Haxe language support in Atom
 
-Adds syntax highlighting and snippets to Haxe files in Atom.
+Adds syntax highlighting and snippets to Haxe files in Atom (.hx,.hxml).
 
 Originally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)
 from the [Haxe TextMate bundle](https://github.com/jdonaldson/HaXe.tmbundle).  
