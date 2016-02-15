@@ -1,4 +1,14 @@
 
+## 0.4.0
+* Removed hss and swfml grammar
+* Renamed grammar files to *-grammars.cson
+* Split snippets for hx|hxml files into seperate files
+* Required atom version >=1.5
+* Snippets: suggest same placeholder as haxe prints with --help (<file>,[optional])
+* Snippets: Allow to exit current at next line
+* Snippets: -D key=value support
+* Snippets: improved --wait
+
 ## 0.3.1
 * Hxml: --each grammer
 
