@@ -1,0 +1,217 @@
+'.source.haxe':
+
+  'trace':
+    'prefix': 'trace'
+    'body': 'trace( $1 );$0'
+
+  '#if':
+    'prefix': '#if'
+    'body': '#if ${1:define}'
+  '#else':
+    'prefix': '#else'
+    'body': '#else '
+  '#elseif':
+    'prefix': '#elseif'
+    'body': '#elseif ${1:define}'
+  '#end':
+    'prefix': '#end'
+    'body': '#end\n'
+  '#else error':
+    'prefix': '#error'
+    'body': '#else error #end\n'
+
+  'try':
+    'prefix': 'try'
+    'body': 'try {\n\t$1\n} catch(${2:e:Dynamic}) {\n\ttrace(\$e);\n}'
+  'catch':
+    'prefix': 'catch'
+    'body': 'catch(${1:e:Dynamic}) {\n\ttrace(\$e);\n}'
+  'throw':
+    'prefix': 'throw'
+    'body': 'throw ${1:expr};$0'
+
+  'while':
+    'prefix': 'while'
+    'body': 'while( ${1:true} ) {\n\t$2\n}$0'
+  'do..while':
+    'prefix': 'do '
+    'body': 'do {\n\t$0\n} while( ${1:true} );'
+  'continue':
+    'prefix': 'continue'
+    'body': 'continue;'
+  'break':
+    'prefix': 'break'
+    'body': 'break;'
+
+  'if':
+    'prefix': 'if'
+    'body': 'if( ${1:condition} ) {\n\t$0\n}'
+  'else':
+    'prefix': 'else'
+    'body': 'else {\n\t$0\n}'
+  'else..if':
+    'prefix': 'elseif'
+    'body': 'else if( ${1:condition} ) {\n\t$0\n}'
+  'if..else':
+    'prefix': 'ifelse'
+    'body': 'if( ${1:condition} ) \{\n\t${2:expression}\n\} else \{\n\t${3:expression}\n\}'
+  'switch':
+    'prefix': 'switch'
+    'body': 'switch $1 \{\ncase ${2:expression}:\n\t$0\n}\n'
+  'case':
+    'prefix': 'case '
+    'body': 'case ${1:expression}:\n\t${2:statement}\n'
+  'default':
+    'prefix': 'default:'
+    'body': 'default:\n\t${1:statement}'
+  'return':
+    'prefix': 'ret'
+    'body': 'return $1;$0'
+
+  'Block Comment Start':
+    'prefix': '/**'
+    'body': '/**\n\t$1\n*/$0'
+
+  'package':
+    'prefix': 'package '
+    'body': 'package ${1:name};\n$0'
+  'class':
+    'prefix': 'class '
+    'body': '\nclass ${1:Name} ${2:extends ${3:SuperClass}} ${4:implements ${5:Interface}} \{\n\n\tpublic function new() \t\{\n\t\t${6:super();\n\t\t}$7\n\t\}\n\n\t$0\n\}'
+  'enum':
+    'prefix': 'enum'
+    'body': 'enum ${1:Name} {\n\t$0\n}'
+  'extern':
+    'prefix': 'extern'
+    'body': 'extern '
+  'import':
+    'prefix': 'import'
+    'body': 'import ${1:package};$0'
+  'interface':
+    'prefix': 'interface'
+    'body': 'interface ${1:Interface} ${2:implements ${3:Interface} }\n{\n\t$0\n}'
+  'macro function':
+    'prefix': 'macro'
+    'body': 'macro public static function ${1:name}( ${2:e : haxe.macro.Expr} ) : haxe.macro.Expr \{\n\t$0\n\}'
+
+  'main class':
+    'prefix': 'class'
+    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${2:Class}();\n\t\}\n\}'
+
+  'for var in 0...end':
+    'prefix': 'fori'
+    'body': 'for( ${1:var} in ${2:0}...${3:end} ) {\n\t${4:expression}\n}\n$0'
+  'for in':
+    'prefix': 'for'
+    'body': 'for( $1 in $2 ) {\n\t$3\n}\n$0'
+
+  'main':
+    'prefix': 'main'
+    'body': 'static function main() \n{\n\t$0\n}'
+  'function':
+    'prefix': 'function'
+    'body': 'function ${1:name}( ${2:params} )${3: : ${4:Void}} \{\n\t$0\n\}'
+  'method':
+    'prefix': 'function'
+    'body': '${1:static }${2:inline }function ${3:name}($4)${5: : ${6:Void}} \{\n\t$0\n\}'
+
+  'private':
+    'prefix': 'private'
+    'body': 'private '
+  'public':
+    'prefix': 'public'
+    'body': 'public '
+  'inline':
+    'prefix': 'inline'
+    'body': 'inline '
+  'static':
+    'prefix': 'static'
+    'body': 'static '
+
+  'private function':
+    'prefix': 'prf'
+    'body': 'private function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+  'private inline function':
+    'prefix': 'prif'
+    'body': 'private inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+  'private static function':
+    'prefix': 'prsf'
+    'body': 'private static function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+  'private static inline function':
+    'prefix': 'prsif'
+    'body': 'private static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+
+  'public function':
+    'prefix': 'pf'
+    'body': 'public function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+  'public inline function':
+    'prefix': 'pif'
+    'body': 'public inline function ${1:name}($2)${3: : ${4:Void}}\n{\n\t$0\n}\n'
+  'public static function':
+    'prefix': 'psf'
+    'body': 'public static function ${1:name}($2)${3: : ${4:Void}}\n{\n\t$0\n}\n'
+  'public static inline function':
+    'prefix': 'psif'
+    'body': 'public static inline function ${1:name}($2)${3: : ${4:Void}}\n{\n\t$0\n}\n'
+
+  'autotyped variable':
+    'prefix': 'v'
+    'body': 'var ${1:name} ${2:: ${3:Type}}${4: = }$5;$0'
+  'typed variable':
+    'prefix': 'var'
+    'body': 'var $1:${2:Type} ${3:= }$4;$0'
+  'private variable':
+    'prefix': 'prv'
+    'body': 'private var $1 ${2:: ${3:Type}};$0'
+  'private static variable':
+    'prefix': 'prsv'
+    'body': 'private static var $1 ${2:: ${3:Type}};$0'
+  'private static inline variable':
+    'prefix': 'prsiv'
+    'body': 'private static inline var $1 ${2:: ${3:Type}} = $4;$0'
+  'public variable':
+    'prefix': 'pv'
+    'body': 'public var $1 ${2:: ${3:Type}};$0'
+  'public static variable':
+    'prefix': 'psv'
+    'body': 'public static var $1 ${2:: ${3:Type}};$0'
+  'public static inline variable':
+    'prefix': 'psiv'
+    'body': 'public static inline var ${1:NAME} ${2:: ${3:Type}} = $4;$0'
+
+  'property':
+    'prefix': 'prop'
+    'body': 'public var ${1:name}(${2:get},${3:set}) : ${4:Type};$0'
+  'getter':
+    'prefix': 'get_'
+    'body': 'function get_${1:name}() : ${2:Type} \{\n\treturn $3;\n\}$0'
+  'setter':
+    'prefix': 'set_'
+    'body': 'function set_${1:name}(${2:v}:${3:Type}) : ${3:Type} \{\n\treturn $4;\n\}$0'
+
+  '@:metadata':
+    'prefix': ':meta'
+    'body': '@:${1:name}${2:($3)}$0'
+  '@metadata':
+    'prefix': 'meta'
+    'body': '@${1:name}${2:($3)}$0'
+
+  'typedef':
+    'prefix': 'typedef'
+    'body': 'typedef ${1:Name} = $2'
+
+  'abstract':
+    'prefix': 'abstract'
+    'body': 'abstract ${1:Name}(${2:Type}) {\n\n\tpublic inline function new( ${3:v} : ${2:Type} ) {\n\t\tthis = ${3:v};\n\t}\n}$0'
+
+  'Array<T>':
+    'prefix': 'Array'
+    'body': 'Array<${1:T}>$0'
+
+  # 'property getter setter':
+  #   'prefix': 'prop'
+  #   'body': 'public var ${1:Property}(get,set):${2:Type};\nprivate var _${1:Property}:${2:Type};\nprivate inline function get_${1:Property}():${2:Type}{ ${3:\n}return _${1:Property}; }\nprivate inline function set_${1:Property}(value:${2:Type}):${2:Type}{ ${4:\n}return _${1:Property} = value; }\n'
+
+  # 'assign argument to property':
+  #   'prefix': 'this'
+  #   'body': 'this.${1:property} = ${1:arg};\n'
