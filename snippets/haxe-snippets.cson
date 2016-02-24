@@ -96,7 +96,7 @@
 
   'main class':
     'prefix': 'class'
-    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${2:Class}();\n\t\}\n\}'
+    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${1:Class}();\n\t\}\n\}'
 
   'for var in 0...end':
     'prefix': 'fori'
