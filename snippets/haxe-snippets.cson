@@ -207,11 +207,9 @@
   'Array<T>':
     'prefix': 'Array'
     'body': 'Array<${1:T}>$0'
-
-  # 'property getter setter':
-  #   'prefix': 'prop'
-  #   'body': 'public var ${1:Property}(get,set):${2:Type};\nprivate var _${1:Property}:${2:Type};\nprivate inline function get_${1:Property}():${2:Type}{ ${3:\n}return _${1:Property}; }\nprivate inline function set_${1:Property}(value:${2:Type}):${2:Type}{ ${4:\n}return _${1:Property} = value; }\n'
-
-  # 'assign argument to property':
-  #   'prefix': 'this'
-  #   'body': 'this.${1:property} = ${1:arg};\n'
+  'List<T>':
+    'prefix': 'List'
+    'body': 'List<${1:T}>$0'
+  'Map<K,V>':
+    'prefix': 'Map'
+    'body': 'Map<${1:K},${2:V}>$0'
