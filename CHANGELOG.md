@@ -1,4 +1,8 @@
 
+## 0.4.1
+* Snippets: extra newline after 'package'
+* Snippets: Snippets: List<T>, Map<K,V>
+
 ## 0.4.0
 * Removed hss and swfml grammar
 * Renamed grammar files to *-grammars.cson
