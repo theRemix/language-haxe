@@ -74,10 +74,10 @@
 
   'package':
     'prefix': 'package '
-    'body': 'package ${1:name};\n$0'
+    'body': 'package ${1:name};\n\n$0'
   'class':
     'prefix': 'class '
-    'body': '\nclass ${1:Name} ${2:extends ${3:SuperClass}} ${4:implements ${5:Interface}} \{\n\n\tpublic function new() \t\{\n\t\t${6:super();\n\t\t}$7\n\t\}\n\n\t$0\n\}'
+    'body': '\nclass ${1:Name} ${2:extends ${3:SuperClass}} ${4:implements ${5:Interface}} \{\n\n\tpublic function new() \{\n\t\t${6:super();\n\t\t}$7\n\t\}\n\t$8\n\}\n$0'
   'enum':
     'prefix': 'enum'
     'body': 'enum ${1:Name} {\n\t$0\n}'
@@ -89,14 +89,14 @@
     'body': 'import ${1:package};$0'
   'interface':
     'prefix': 'interface'
-    'body': 'interface ${1:Interface} ${2:implements ${3:Interface} }\n{\n\t$0\n}'
+    'body': 'interface ${1:Interface} ${2:implements ${3:Interface}} {\n\t$0\n}'
   'macro function':
     'prefix': 'macro'
     'body': 'macro public static function ${1:name}( ${2:e : haxe.macro.Expr} ) : haxe.macro.Expr \{\n\t$0\n\}'
 
   'main class':
     'prefix': 'class'
-    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${2:Class}();\n\t\}\n\}'
+    'body': 'class ${1:Class} \{\n\n\tpublic function new() {\n\t\t$0\n\t\}\n\n\tstatic function main() \{\n\t\tnew ${1:Class}();\n\t\}\n\}'
 
   'for var in 0...end':
     'prefix': 'fori'
@@ -207,11 +207,9 @@
   'Array<T>':
     'prefix': 'Array'
     'body': 'Array<${1:T}>$0'
-
-  # 'property getter setter':
-  #   'prefix': 'prop'
-  #   'body': 'public var ${1:Property}(get,set):${2:Type};\nprivate var _${1:Property}:${2:Type};\nprivate inline function get_${1:Property}():${2:Type}{ ${3:\n}return _${1:Property}; }\nprivate inline function set_${1:Property}(value:${2:Type}):${2:Type}{ ${4:\n}return _${1:Property} = value; }\n'
-
-  # 'assign argument to property':
-  #   'prefix': 'this'
-  #   'body': 'this.${1:property} = ${1:arg};\n'
+  'List<T>':
+    'prefix': 'List'
+    'body': 'List<${1:T}>$0'
+  'Map<K,V>':
+    'prefix': 'Map'
+    'body': 'Map<${1:K},${2:V}>$0'
