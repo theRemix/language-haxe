@@ -1,4 +1,7 @@
 
+## 0.4.2
+* Syntax: `$type` is a keyword, not `type`
+
 ## 0.4.1
 * Snippets: extra newline after 'package'
 * Snippets: Snippets: List<T>, Map<K,V>
