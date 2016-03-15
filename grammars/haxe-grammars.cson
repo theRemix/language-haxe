@@ -241,7 +241,7 @@
     'name': 'support.constant.haxe'
   }
   {
-    'match': '\\b(case|cast|catch|default|dynamic|do|else|for|get|if|in|as|new|set|switch|throw|try|type|while|return|break|continue|extern|dynamic|implements|inline|override|private|public|static|import|using|package|var)\\b'
+    'match': '(\\$type|\\b(case|cast|catch|default|dynamic|do|else|for|get|if|in|as|new|set|switch|throw|try|while|return|break|continue|extern|dynamic|implements|inline|override|private|public|static|import|using|package|var)\\b)'
     'name': 'keyword.control.haxe'
   }
   {
