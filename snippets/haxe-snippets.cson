@@ -22,13 +22,13 @@
 
   'try':
     'prefix': 'try'
-    'body': 'try {\n\t$1\n} catch(${2:e:Dynamic}) {\n\ttrace(\$e);\n}'
+    'body': 'try {\n\t$1\n} catch(${2:e:Dynamic}) {\n\t${3:trace(e);}\n}\n$0'
   'catch':
     'prefix': 'catch'
-    'body': 'catch(${1:e:Dynamic}) {\n\ttrace(\$e);\n}'
+    'body': 'catch(${1:e:Dynamic}) {\n\t${2:trace(e);}\n}\n$0'
   'throw':
     'prefix': 'throw'
-    'body': 'throw ${1:expr};$0'
+    'body': 'throw ${1:expr};\n$0'
 
   'while':
     'prefix': 'while'
