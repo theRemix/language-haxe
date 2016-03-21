@@ -206,7 +206,7 @@
 
   'Array<T>':
     'prefix': 'Array'
-    'body': 'Array<${1:T}>$0'
+    'body': 'Array<${1:T}>();$0'
   'List<T>':
     'prefix': 'List'
     'body': 'List<${1:T}>$0'
