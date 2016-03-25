@@ -1,4 +1,7 @@
 
+## 0.4.3
+* Snippets: minor `try/catch` improvement
+
 ## 0.4.2
 * Syntax: `$type` is a keyword, not `type`
 
