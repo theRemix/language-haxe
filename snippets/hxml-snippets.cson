@@ -5,6 +5,9 @@
   'hxml -js':
     'prefix': 'js'
     'body': '-js ${1:<file>}.js\n$0'
+  'hxml -lua':
+    'prefix': 'lua'
+    'body': '-lua ${1:<file>}.lua\n$0'
   'hxml -swf':
     'prefix': 'swf'
     'body': '-swf ${1:<file>}.swf\n$0'
@@ -20,6 +23,9 @@
   'hxml -cpp':
     'prefix': 'cpp'
     'body': '-cpp ${1:<directory>}\n$0'
+ 'hxml -cppia':
+   'prefix': 'cppia'
+   'body': '-cppia ${1:<file>}\n$0'
   'hxml -cs':
     'prefix': 'cs'
     'body': '-cs ${1:<directory>}\n$0'
@@ -28,7 +34,10 @@
     'body': '-java ${1:<directory>}\n$0'
   'hxml -python':
     'prefix': 'python'
-    'body': '-python ${1:<file>}\n$0'
+    'body': '-python ${1:<file>}.py\n$0'
+  'hxml -hl':
+    'prefix': 'hl'
+    'body': '-hl ${1:<file>}\n$0'
   'hxml -xml':
     'prefix': 'xml'
     'body': '-xml ${1:<file>}\n$0'
