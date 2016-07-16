@@ -1,10 +1,8 @@
-'comment': 'Haxe Syntax: version 3.2.1'
-'fileTypes': [
-    'hx'
-]
+'name': 'Haxe'
+'comment': 'Haxe Syntax: version 3.3.0'
+'fileTypes': ['hx']
 'foldingStartMarker': '(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{|#if)'
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$|#end)'
-'name': 'Haxe'
 'patterns': [
   {
     'include': '#comments'
@@ -39,114 +37,6 @@
   {
     'match': '#(if|else|elseif|end|error)\\b'
     'name': 'keyword.preprocessor.macro.haxe'
-  }
-  {
-    'match': '(flash.)?\\b(Accessibility|Boot|Button|Camera|Color|ContextMenu|ContextMenuItem|ExtendedKey|Key|Lib|LoadVars|LocalConnection|Microphone|Mouse|MovieClip|MovieClipLoader|NetConnection|NetStream|PrintJob|Selection|SelectionListener|SharedObject|Sound|Stage|System|TextField|TextFormat|TextSnapshot|Video|XMLRequest|XMLSocket)\\b'
-    'name': 'support.class.haxe.flash'
-  }
-  {
-    'match': '(flash.display.)?\\b(BitmapData)\\b'
-    'name': 'support.class.haxe.flash.display'
-  }
-  {
-    'match': '(flash.external.)?\\b(ExternalInterface)\\b'
-    'name': 'support.class.haxe.flash.external'
-  }
-  {
-    'match': '\\b(BevelFilter|BitmapFilter|BlurFilter|ColorMatrixFilter|ConvolutionFilter|DisplacementMapFilter|DropShadowFilter|GlowFilter|GradientBevelFilter|GradientGlowFilter)\\b'
-    'name': 'support.class.haxe.flash.filters'
-  }
-  {
-    'match': '(flash.geom.)?\\b(ColorTransform|Matrix|Point|Rectangle|Transform)\\b'
-    'name': 'support.class.haxe.flash.geom'
-  }
-  {
-    'match': '\\b(FileReference|FileReferenceList)\\b'
-    'name': 'support.class.haxe.flash.net'
-  }
-  {
-    'match': '(flash.system.)?\\b(Capabilities|IME|Security|LoaderContext|SecurityDomain|ApplicationDomain)\\b'
-    'name': 'support.class.haxe.flash.system'
-  }
-  {
-    'match': '\\b(StyleSheet|TextRenderer)\\b'
-    'name': 'support.class.haxe.flash.text'
-  }
-  {
-    'match': '\\b(Boot|Error|Lib|Vector)\\b'
-    'name': 'support.class.haxe.flash9'
-  }
-  {
-    'match': '\\b(Accessibility|AccessibilityImplementation|AccessibilityProperties)\\b'
-    'name': 'support.class.haxe.flash9.accessibility'
-  }
-  {
-    'match': '(flash.display.)?\\b(AVM1Movie|ActionScriptVersion|Bitmap|BitmapData|BitmapDataChannel|BlendMode|CapsStyle|DisplayObject|DisplayObjectContainer|FrameLabel|GradientType|Graphics|GraphicsBitmapFill|GraphicsEndFill|GraphicsGradientFill|GraphicsPath|GraphicsPathCommand|GraphicsPathWinding|GraphicsShaderFill|GraphicsSolidFill|GraphicsStroke|GraphicsTrianglePath|IBitmapDrawable|IGraphicsData|IGraphicsFill|IGraphicsPath|IGraphicsStroke|InteractiveObject|InterpolationMethod|JointStyle|LineScaleMode|Loader|LoaderInfo|MorphShape|MovieClip|PixelSnapping|SWFVersion|Scene|Shader|ShaderData|ShaderInput|ShaderJob|ShaderParameter|ShaderParameterType|ShaderPrecision|Shape|SimpleButton|SpreadMethod|Sprite|Stage|StageAlign|StageDisplayStage|StageQuality|StageScaleMode|TriangleCulling)\\b'
-    'name': 'support.class.haxe.flash9.display'
-  }
-  {
-    'match': '\\b(EOFError|IOError|IllegalOperationError|InvalidSWFError|MemoryError|ScriptTimeoutError|StackOverflowError)\\b'
-    'name': 'support.class.haxe.flash9.errors'
-  }
-  {
-    'match': '\\b(ActivityEvent|AsyncErrorEvent|ContextMenuEvent|DataEvent|ErrorEvent|Event|EventDispatcher|EventPhase|FocusEvent|FullScreenEvent|HTTPStatusEvent|IEventDispatcher|IMEEvent|IOErrorEvent|KeyboardEvent|MouseEvent|NetFilterEvent|NetStatusEvent|ProgressEvent|SamplesCallbackEvent|SecurityErrorEvent|ShaderEvent|StatusEvent|SyncEvent|TextEvent|TimerEvent|WeakFunctionClosure|WeakMethodClosure)\\b'
-    'name': 'support.class.haxe.flash9.events'
-  }
-  {
-    'match': '\\b(ExternalInterface)\\b'
-    'name': 'support.class.haxe.flash9.external'
-  }
-  {
-    'match': '\\b(BevelFilter|BitmapFilter|BitmapFilterQuality|BitmapFilterType|BlurFilter|ColorMatrixFilter|ConvolutionFilter|DisplacementMapFilter|DisplacementMapFilterMode|DropShadowFilter|GlowFilter|GradientBevelFilter|GradientGlowFilter|ShaderFilter)\\b'
-    'name': 'support.class.haxe.flash9.filters'
-  }
-  {
-    'match': '\\b(ColorTransform|Matrix|Matrix3D|Orientation3D|PerspectiveProjection|Point|Rectangle|Transform|Utils3D|Vector3D)\\b'
-    'name': 'support.class.haxe.flash9.geom'
-  }
-  {
-    'match': '\\b(Camera|ID3Info|Microphone|Sound|SoundChannel|SoundCodec|SoundLoaderContext|SoundMixer|SoundTransform|Video)\\b'
-    'name': 'support.class.haxe.flash9.media'
-  }
-  {
-    'match': '\\b(DynamicPropertyOutput|FileFilter|FileReference|FileReferenceList|IDynamicPropertyOutput|IDynamicPropertyWriter|LocalConnection|NetConnection|NetStream|NetStreamInfo|NetStreamPlayOptions|NetStreamPlayTransitions|ObjectEncoding|Responder|SharedObject|SharedObjectFlushStatus|Socket|URLLoader|URLLoaderDataFormat|URLRequest|URLRequestHeader|URLRequestMethod|URLStream|URLVariables|XMLSocket)\\b'
-    'name': 'support.class.haxe.flash9.net'
-  }
-  {
-    'match': '\\b(PrintJob|PrintJobOptions|PrintJobOrientation)\\b'
-    'name': 'support.class.haxe.flash9.printing'
-  }
-  {
-    'match': '\\b(Api|DeleteObjectSample|NewObjectSample|Sample|StackFrame)\\b'
-    'name': 'support.class.haxe.flash9.sampler'
-  }
-  {
-    'match': '\\b(ApplicationDomain|Capabilities|FSCommand|IME|IMEConversionMode|JPEGLoaderContext|LoaderContext|Security|SecurityDomain|SecurityPanel|System)\\b'
-    'name': 'support.class.haxe.flash9.system'
-  }
-  {
-    'match': '\\b(AntiAliasType|CSMSettings|Font|FontStyle|FontType|GridFitType|StaticText|StyleSheet|TextColorType|TextDisplayMode|TextExtent|TextField|TextFieldAutoSize|TextFieldType|TextFormat|TextFormatAlign|TextFormatDisplay|TextLineMetrics|TextRenderer|TextRun|TextSnapshot)\\b'
-    'name': 'support.class.haxe.flash9.text'
-  }
-  {
-    'match': '\\b(BreakOpportunity|ContentElement|DigitCase|DigitWidth|EastAsianJustifier|ElementFormat|FontDescription|FontLookup|FontMetrics|FontPosture|FontWeight|GlyphRotation|GraphicElement|GroupElement|JustificationStyle|Kerning|LigatureLevel|LineJustification|SpaceJustifier|TabAlignment|TabStop|TextBaseline|TextBlock|TextElement|TextJustifier|TextLine|TextLineCreationResult|TextLineMirrorRegion|TextLineValidity|TextRotation|TypographicCase)\\b'
-    'name': 'support.class.haxe.flash9.text.engine'
-  }
-  {
-    'match': '\\b(Trace)\\b'
-    'name': 'support.class.haxe.flash9.trace'
-  }
-  {
-    'match': '\\b(ContextMenu|ContextMenuBuiltInItems|ContextMenuClipboardItems|ContextMenuItem|KeyLocation|Keyboard|Mouse|MouseCursor)\\b'
-    'name': 'support.class.haxe.flash9.ui'
-  }
-  {
-    'match': '\\b(ByteArray|Dictionary|Endian|IDataInput|IDataOutput|IExternalizable|Namespace|ObjectInput|ObjectOutput|Proxy|QName|SetIntervalTimer|Timer|TypedDictionary)\\b'
-    'name': 'support.class.haxe.flash9.utils'
-  }
-  {
-    'match': '\\b(XML|XMLDocument|XMLList|XMLNode|XMLNodeType|XMLParser|XMLTag)\\b'
-    'name': 'support.class.haxe.flash9.xml'
   }
   {
     'match': '\\b(Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|EReg|Enum|Float|Hash|Int|IntHash|IntIter|Iterable|Iterator|Lambda|List|Math|Null|Reflect|Std|String|StringBuf|StringTools|Type|UInt|ValueType|Void|Xml|XmlType)\\b'
