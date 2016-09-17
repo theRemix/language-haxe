@@ -1,3 +1,10 @@
+## 0.4.5
+* Grammar: remove flash specific std grammar definitions
+* Fix hxml snippet
+* Add missing hxml -version snippet
+
+## 0.4.4
+* haxe 3.3 support
 
 ## 0.4.3
 * Snippets: minor `try/catch` improvement

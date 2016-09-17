@@ -23,9 +23,9 @@
   'hxml -cpp':
     'prefix': 'cpp'
     'body': '-cpp ${1:<directory>}\n$0'
- 'hxml -cppia':
-   'prefix': 'cppia'
-   'body': '-cppia ${1:<file>}\n$0'
+  'hxml -cppia':
+    'prefix': 'cppia'
+    'body': '-cppia ${1:<file>}\n$0'
   'hxml -cs':
     'prefix': 'cs'
     'body': '-cs ${1:<directory>}\n$0'
@@ -155,3 +155,6 @@
   'hxml --cwd':
     'prefix': 'cwd'
     'body': '--cwd ${1:dir}\n$0'
+  'hxml -version':
+    'prefix': 'version'
+    'body': '-version\n$0'
