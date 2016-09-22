@@ -2,159 +2,219 @@
   'hxml -cp':
     'prefix': 'cp'
     'body': '-cp ${1:<path>}\n$0'
+    'description': 'Adds a class path where .hx source files or packages (sub-directories) can be found.'
   'hxml -js':
     'prefix': 'js'
     'body': '-js ${1:<file>}.js\n$0'
+    'description': 'Compile code to JavaScript file'
   'hxml -lua':
     'prefix': 'lua'
     'body': '-lua ${1:<file>}.lua\n$0'
+    'description': 'Compile code to Lua file'
   'hxml -swf':
     'prefix': 'swf'
     'body': '-swf ${1:<file>}.swf\n$0'
+    'description': 'Compile code to Flash SWF file'
   'hxml -as3':
     'prefix': 'as3'
     'body': '-as3 ${1:<directory>}\n$0'
+    'description': 'Generate AS3 code into target directory'
   'hxml -neko':
     'prefix': 'neko'
     'body': '-neko ${1:<file>}.n\n$0'
+    'description': 'Compile code to Neko Binary'
   'hxml -php':
     'prefix': 'php'
     'body': '-php ${1:<directory>}\n$0'
+    'description': 'Generate PHP code into target directory'
   'hxml -cpp':
     'prefix': 'cpp'
     'body': '-cpp ${1:<directory>}\n$0'
+    'description': 'Generate C++ code into target directory'
   'hxml -cppia':
     'prefix': 'cppia'
     'body': '-cppia ${1:<file>}\n$0'
+    'description': 'Generate Cppia code into target directory'
   'hxml -cs':
     'prefix': 'cs'
     'body': '-cs ${1:<directory>}\n$0'
+    'description': 'Generate C# code into target directory'
   'hxml -java':
     'prefix': 'java'
     'body': '-java ${1:<directory>}\n$0'
+    'description': 'Generate Java code into target directory'
   'hxml -python':
     'prefix': 'python'
     'body': '-python ${1:<file>}.py\n$0'
+    'description': 'Generate Python code into target directory'
   'hxml -hl':
     'prefix': 'hl'
     'body': '-hl ${1:<file>}\n$0'
+    'description': 'Compile HL code as target file'
   'hxml -xml':
     'prefix': 'xml'
     'body': '-xml ${1:<file>}\n$0'
+    'description': 'Generate XML types description'
   'hxml -main':
     'prefix': 'main'
     'body': '-main ${1:<class>}\n$0'
+    'description': 'Sets the main class'
   'hxml -lib':
     'prefix': 'lib'
     'body': '-lib ${1:${2:<library>}\:${3:[version]}}\n$0'
+    'description': 'Use a haxelib library'
+    'descriptionMoreURL': 'http://lib.haxe.org/'
   'hxml -D':
     'prefix': 'D'
     'body': '-D ${1:${2:key}=${3:value}}\n$0'
+    'description': 'Define a conditional compilation flag'
+    'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
   'hxml -v':
     'prefix': 'v'
     'body': '-v\n$0'
+    'description': 'Turn on verbose mode'
   'hxml -debug':
     'prefix': 'debug'
     'body': '-debug\n$0'
+    'description': 'Add debug information to the compiled code'
   'hxml -dce':
     'prefix': 'dce'
     'body': '-dce ${1:[std|full|no]}\n$0'
+    'description': 'Set the dead code elimination mode (default std)'
   'hxml -swf-version':
     'prefix': 'swf-version'
     'body': '-swf-version ${1:<version>}\n$0'
+    'description': 'Change the SWF version'
   'hxml -swf-header':
     'prefix': 'swf-header'
     'body': '-swf-header ${1:width}:${2:height}:${3:fps}:${4:color}\n$0'
+    'description': 'Define SWF header (width:height:fps:color)'
   'hxml -swf-lib':
     'prefix': 'swf-lib'
     'body': '-swf-lib ${1:<file>}\n$0'
+    'description': 'Add the SWF library to the compiled SWF'
   'hxml -swf-lib-extern':
     'prefix': 'swf-lib-extern'
     'body': '-swf-lib-extern ${1:<file>}\n$0'
+    'description': 'Use the SWF library for type checking'
   'hxml -java-lib':
     'prefix': 'java-lib'
     'body': '-java-lib ${1:<file>}\n$0'
+    'description': 'add an external JAR or class directory library'
   'hxml -net-lib':
     'prefix': 'net-lib'
     'body': '-net-lib ${1:${2:<file>[}@${3:std]}}\n$0'
+    'description': 'Add an external .NET DLL file'
   'hxml -net-std':
     'prefix': 'net-std'
     'body': '-net-std ${1:<file>}\n$0'
+    'description': 'Add a root std .NET DLL search path'
   'hxml -c-arg':
     'prefix': 'c-arg'
     'body': '-c-arg ${1:<arg>}\n$0'
+    'description': 'Pass option <arg> to the native Java/C# compiler'
   'hxml -x':
     'prefix': 'x'
     'body': '-x ${1:<file>}\n$0'
+    'description': 'Shortcut for compiling and executing a neko file'
   'hxml -resource':
     'prefix': 'resource'
     'body': '-resource ${1:${2:<file>[}@${3:name]}}\n$0'
+    'description': 'Add a named resource file'
+    'descriptionMoreURL': 'https://haxe.org/manual/cr-resources.html'
   'hxml -prompt':
     'prefix': 'prompt'
     'body': '-prompt\n$0'
+    'description': 'Prompt on error'
   'hxml -cmd':
     'prefix': 'cmd'
     'body': '-cmd ${1:<command>}\n$0'
+    'description': 'Run the specified command after successful compilation'
   'hxml --flash-strict':
     'prefix': 'flash-strict'
     'body': '--flash-strict\n$0'
+    'description': 'More type strict flash API'
   'hxml --no-traces':
     'prefix': 'no-traces'
     'body': '--no-traces\n$0'
+    'description': 'Remove trace calls in the program'
   'hxml --gen-hx-classes':
     'prefix': 'gen-hx-classes'
     'body': '--gen-hx-classes\n$0'
+    'description': 'Generate hx headers for all input classes'
   'hxml --next':
     'prefix': 'next'
     'body': '--next\n$0'
+    'description': 'Separate several haxe compilations'
   'hxml --each':
     'prefix': 'each'
     'body': '--each\n$0'
+    'description': 'Append preceding parameters to all haxe compilations separated by --next'
   'hxml --display':
     'prefix': 'display'
     'body': '--display\n$0'
+    'description': 'Display code tips'
   'hxml --no-output':
     'prefix': 'no-output'
     'body': '--no-output\n$0'
+    'description': 'Compiles but does not generate any file'
   'hxml --times':
     'prefix': 'times'
     'body': '--times\n$0'
+    'description': 'Measure compilation times'
   'hxml --no-inline':
     'prefix': 'no-inline'
     'body': '--no-inline\n$0'
+    'description': 'Disable inlining'
+    'descriptionMoreURL': 'https://haxe.org/manual/class-field-inline.html'
   'hxml --no-opt':
     'prefix': 'no-opt'
     'body': '--no-opt\n$0'
+    'description': 'Disable code optimizations'
   'hxml --php-front':
     'prefix': 'php-front'
     'body': '--php-front ${1:<filename>}\n$0'
+    'description': 'Select the name for the php front file'
   'hxml --php-lib':
     'prefix': 'php-lib'
     'body': '--php-lib ${1:<filename>}\n$0'
+    'description': 'Select the name for the php lib folder'
   'hxml --php-prefix':
     'prefix': 'php-prefix'
     'body': '--php-prefix ${1:<name>}\n$0'
+    'description': 'Prefix all classes with given name'
   'hxml --remap':
     'prefix': 'remap'
     'body': '--remap ${1:<package}:${2:target>}\n$0'
+    'description': 'Remap a package to another one'
   'hxml --interp':
     'prefix': 'interp'
     'body': '--interp\n$0'
+    'description': 'Interpret the program using internal macro system'
   'hxml --macro':
     'prefix': 'macro'
     'body': '--macro ${1:name}\n$0'
+    'description': 'Call the given macro before typing anything else'
+    'descriptionMoreURL': 'https://haxe.org/manual/macro-initialization.html'
   'hxml --eval':
     'prefix': 'eval'
     'body': '--eval ${1:arg}\n$0'
+    'description': 'Evaluates argument as Haxe module code'
   'hxml --wait':
     'prefix': 'wait'
     'body': '--wait ${2:[127.0.0.1]:}${1:6000}\n$0'
+    'description': 'Wait on the given port for commands to run'
+    'descriptionMoreURL': 'https://haxe.org/manual/cr-completion-server.html'
   'hxml --connect':
     'prefix': 'connect'
     'body': '--connect ${1:${3:[host}\:${2:]port}}\n$0'
+    'description': 'Connect on the given port and run commands there'
+    'descriptionMoreURL': 'https://haxe.org/manual/cr-completion-server.html'
   'hxml --cwd':
     'prefix': 'cwd'
     'body': '--cwd ${1:dir}\n$0'
+    'description': 'Set current working directory'
   'hxml -version':
     'prefix': 'version'
     'body': '-version\n$0'
+    'description': 'Print version and exit'
