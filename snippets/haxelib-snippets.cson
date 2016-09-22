@@ -1,0 +1,51 @@
+'.source.haxelib':
+  'name':
+    'prefix': 'name'
+    'body': '"name": "${1}"$0'
+    'description': 'The name of the library. It must contain at least 3 characters among the following: [A-Za-z0-9_-.]. In particular, no spaces are allowed.'
+  'url':
+    'prefix': 'url'
+    'body': '"url": "${1}"$0'
+    'description': 'The URL of the library, i.e. where more information can be found.'
+  'version':
+    'prefix': 'version'
+    'body': '"version": "${1:major}.${2:minor}.${3:patch}"$0'
+    'description': 'The version string of the library (major.minor.patch).'
+  'description':
+    'prefix': 'description'
+    'body': '"description": "${1}"$0'
+    'description': 'The description of what the library is doing'
+  'tags':
+    'prefix': 'tags'
+    'body': '"tags": ["${1}"]$0'
+    'description': 'An array of tag-strings which are used on the repository website to sort libraries'
+  'classPath':
+    'prefix': 'classPath'
+    'body': '"classPath": "${1}"$0'
+    'description': 'The path string to the source files'
+  'releasenote':
+    'prefix': 'releasenote'
+    'body': '"releasenote": "${1}"$0'
+    'description': 'The release notes of the current version'
+  'contributors':
+    'prefix': 'contributors'
+    'body': '"contributors": ["${1}"]$0'
+    'description': 'An array of user names which identify contributors to the library that are allowed to upload to haxelib'
+  'dependencies':
+    'prefix': 'dependencies'
+    'body': '"dependencies": {\n\t
+        "${1:<name>}":"${2:<version>}"\n
+    }$0'
+    'description': 'An object describing the dependencies of the library'
+  'license':
+    'prefix': 'license'
+    'body': '"license": "${1:GPL}"$0'
+    'description': 'The license under which the library is released.'
+  'new':
+    'prefix': '{'
+    'body': '{\n
+        \t"name": "${1}",\n
+        \t"version": "${2:${3:major}.${4:minor}.${5:patch}}",\n
+        \t"license": "${6}",\n
+        \t"releasenote": "${7}",\n
+        \t"contributors": ["${8}"]\n'
