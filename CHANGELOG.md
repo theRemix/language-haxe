@@ -1,3 +1,10 @@
+## 0.5.0
+* Fixed hxml grammar comment definition
+* Added descriptions and urls to snippets
+* Snippet for haxelib.json
+* Spec tests
+* TravisCI integration
+
 ## 0.4.5
 * Grammar: remove flash specific std grammar definitions
 * Fix hxml snippet
