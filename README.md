@@ -1,6 +1,6 @@
 # Haxe language support in Atom
 
-[![Package version!](https://img.shields.io/apm/v/language-haxe.svg?style=flat-square)](https://atom.io/packages/language-haxe) [![Plugin installs!](https://img.shields.io/apm/dm/language-haxe.svg?style=flat-square)](https://atom.io/packages/language-haxe) [![Build Status](https://travis-ci.org/tong/language-haxe.svg?branch=master)](https://travis-ci.org/tong/language-haxe)
+[![Package version!](https://img.shields.io/apm/v/language-haxe.svg?style=flat-square)](https://atom.io/packages/language-haxe) [![Plugin installs!](https://img.shields.io/apm/dm/language-haxe.svg?style=flat-square)](https://atom.io/packages/language-haxe) [![Build Status](https://travis-ci.org/theRemix/language-haxe.svg?branch=master)](https://travis-ci.org/theRemix/language-haxe)
 
 Adds syntax highlighting and snippets to Haxe files in Atom (`hx`,`hxml`).
 
