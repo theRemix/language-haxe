@@ -16,7 +16,7 @@
   {
     'captures':
       '1':
-        'name': 'punctuation.definition.comment.actionscript'
+        'name': 'punctuation.definition.comment.haxe'
     'match': '(#).*$\\n?'
     'name': 'comment.line.number-sign.hxml'
   }
