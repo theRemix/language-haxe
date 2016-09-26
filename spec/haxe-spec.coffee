@@ -30,11 +30,12 @@ describe "Haxe Grammar", ->
         expect(grammar.fileTypes[0]).toBe "hx"
 
     describe "keywords", ->
-        keywords = ['break','catch','continue','do']
+        keywords = ['abstract','break','case','cast','catch','class','continue','default','do','dynamic','else','enum','extern','false','for','function','if','implements','in','inline','interface','never','new','override','package','private','public','return','static','super','this','trace','true','try','typedef','untyped','using','while']
         for keyword in keywords
             it "tokenizes the #{keyword} keyword", ->
                 {tokens} = grammar.tokenizeLine(keyword)
-                #expect(tokens[0]).toEqual value: '$break', scopes: ['source.js']
+                # TODO
+                #expect(tokens[0]).toEqual value: '$break', scopes: ['source.haxe']
                 #expect(tokens[0]).toEqual value: keyword, scopes: ['source.haxe','keyword.control.haxe.flow-control.2']
 
     describe "numbers", ->

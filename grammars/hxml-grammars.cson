@@ -1,6 +1,5 @@
-'fileTypes': [
-  'hxml'
-]
+'scopeName': 'source.hxml'
+'fileTypes': ['hxml']
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
 'foldingStopMarker': '\\*\\*/|^\\s*\\}'
 'name': 'Hxml'
@@ -21,4 +20,3 @@
     'name': 'comment.line.number-sign.hxml'
   }
 ]
-'scopeName': 'source.hxml'

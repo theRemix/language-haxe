@@ -26,6 +26,12 @@
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
 
+    'trace':
+        'prefix': 'trace'
+        'body': 'trace( $1 );$0'
+        'description': 'Print information'
+        'descriptionMoreURL': 'http://haxe.org/manual/lf-trace-log.html'
+
     'Line Comment Start':
         'prefix': '//'
         'body': '// ${1: }\n$0'
@@ -34,18 +40,27 @@
         'body': '/**\n\t$1\n*/$0'
         'description': 'Block comment'
 
+    'true':
+        'prefix': 'true'
+        'body': 'true'
+    'false':
+        'prefix': 'false'
+        'body': 'false'
+
     'Regular Expression':
         'prefix': '~/'
         'body': '~/${1:<pattern>}/${2:<modifier>};$0'
-        'description': 'Regular Expression'
+        'description': 'Regular expression'
         'descriptionMoreURL': 'https://haxe.org/manual/std-regex.html'
 
     'package':
         'prefix': 'package '
-        'body': 'package ${1:name};\n\n$0'
+        'body': 'package ${1:<name>};\n\n$0'
     'import':
         'prefix': 'import'
-        'body': 'import ${1:package};$0'
+        'body': 'import ${1:<package>};\n$0'
+        'description': 'Allow omitting the package name when using a type'
+        'descriptionMoreURL': 'http://haxe.org/manual/type-system-import.html'
     'private':
         'prefix': 'private'
         'body': 'private '
@@ -144,8 +159,6 @@
     'property':
         'prefix': 'prop'
         'body': 'public var ${1:name}(${2:get},${3:set}) : ${4:Type};$0'
-        #'descriptionMoreURL': 'http://haxe.org/manual/class-field-property.html'
-
     'getter':
         'prefix': 'get_'
         'body': 'function get_${1:name}() : ${2:Type} \{\n\treturn $3;\n\}$0'
@@ -156,9 +169,12 @@
     'function':
         'prefix': 'function'
         'body': 'function ${1:name}( ${2:params} )${3: : ${4:Void}} \{\n\t$5\n\}\n$0'
-    #'method':
-    #    'prefix': 'function'
-    #    'body': '${1:static }${2:inline }function ${3:name}($4)${5: : ${6:Void}} \{\n\t$0\n\}'
+    'method':
+        'prefix': 'static function'
+        'body': '${1:static }${2:inline }function ${3:name}($4)${5: : ${6:Void}} \{\n\t$0\n\}'
+    'macro function':
+        'prefix': 'macro'
+        'body': 'macro public static function ${1:name}( ${2:e : haxe.macro.Expr} ) : haxe.macro.Expr \{\n\t$0\n\}'
 
     'class':
         'prefix': 'class '
@@ -168,9 +184,13 @@
     'enum':
         'prefix': 'enum'
         'body': 'enum ${1:Name} {\n\t$0\n}'
+        'description': 'Enumeration type'
+        'descriptionMoreURL': 'http://haxe.org/manual/types-enum-instance.html'
     'interface':
         'prefix': 'interface'
         'body': 'interface ${1:Interface} ${2:implements ${3:Interface}} {\n\t$0\n}'
+        'description': 'Signature of a class'
+        'descriptionMoreURL': 'http://haxe.org/manual/types-interfaces.html'
     'typedef':
         'prefix': 'typedef'
         'body': 'typedef ${1:Name} = $2'
@@ -201,12 +221,6 @@
         'prefix': 'main'
         'body': 'static function main() {\n\t$0\n}'
 
-    'trace':
-        'prefix': 'trace'
-        'body': 'trace( $1 );$0'
-        'description': 'Print information'
-        'descriptionMoreURL': 'http://haxe.org/manual/lf-trace-log.html'
-
     'private function':
         'prefix': 'prf'
         'body': 'private function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
@@ -233,21 +247,19 @@
         'prefix': 'psif'
         'body': 'public static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
 
-    'macro function':
-        'prefix': 'macro'
-        'body': 'macro public static function ${1:name}( ${2:e : haxe.macro.Expr} ) : haxe.macro.Expr \{\n\t$0\n\}'
-
     'Array<T>':
         'prefix': 'Array'
-        'body': 'Array<${1:T}>$0'
-        #'description': 'Collection of elements'
-        #'descriptionMoreURL': 'http://api.haxe.org/Array.html'
+        'body': 'Array<${1:T}>()$0'
+        'description': 'Collection of elements'
+        'descriptionMoreURL': 'http://api.haxe.org/Array.html'
     'Class<T>':
         'prefix': 'Class'
         'body': 'Class<${1:T}>$0'
     'List<T>':
         'prefix': 'List'
-        'body': 'List<${1:T}>$0'
+        'body': 'List<${1:T}>()$0'
+        'description': 'A linked-list of elements'
     'Map<K,V>':
         'prefix': 'Map'
-        'body': 'Map<${1:K},${2:V}>$0'
+        'body': 'Map<${1:K},${2:V}>()$0'
+        'description': 'Key to value mapping for arbitrary value types'
