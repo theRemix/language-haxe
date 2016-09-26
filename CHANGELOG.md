@@ -1,3 +1,10 @@
+## 0.5.1
+*	Grammars cleanup
+* Remove std lib grammars
+* More snippet descriptions
+* Add snippet for true/false
+* Spec: add all keywords
+
 ## 0.5.0
 * Fixed hxml grammar comment definition
 * Added descriptions and urls to snippets
