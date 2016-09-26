@@ -1,3 +1,4 @@
+'scopeName': 'source.haxe'
 'name': 'Haxe'
 'comment': 'Haxe Syntax: version 3.3.0'
 'fileTypes': ['hx']
@@ -527,4 +528,3 @@
         ]
       }
     ]
-'scopeName': 'source.haxe'
