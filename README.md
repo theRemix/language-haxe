@@ -15,32 +15,32 @@ See the [Changelog](https://github.com/theRemix/language-haxe/blob/master/CHANGE
 
 ***
 
-**'v'**
+`v`  
 ![v](http://i.imgur.com/J3ytuSc.gif)
 
-**'var'**
+`var`  
 ![var](http://i.imgur.com/c7oiRUj.gif)
 
-**'fn'**
+`fn`  
 ![fn](http://i.imgur.com/9sSup2a.gif)
 
-**'fun'**
+`fun`  
 ![fun](http://i.imgur.com/F8GOyD5.gif)
 
-**'pf'**
+`pf`  
 ![pf](http://i.imgur.com/JTlbPa9.gif)
 
-**'prf'**
+`prf`  
 ![prf](http://i.imgur.com/2ytFnNt.gif)
 
-**'prsif' 'ret'**
+`prsif` `ret`  
 ![prsif ret](http://i.imgur.com/EpRCRCG.gif)
 
-**'switch' 'case' 'def'**
+`switch` `case` `def`  
 ![switch case def](http://i.imgur.com/5oFnPTg.gif)
 
-**'fori' 'tr'**
+`fori` `tr`  
 ![fori tr](http://i.imgur.com/jD1IQtt.gif)
 
-**'for' 'trace'**
+`for` `trace`  
 ![for trace](http://i.imgur.com/HocLlST.gif)
