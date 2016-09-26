@@ -40,6 +40,13 @@
         'body': '/**\n\t$1\n*/$0'
         'description': 'Block comment'
 
+    'true':
+        'prefix': 'true'
+        'body': 'true'
+    'false':
+        'prefix': 'false'
+        'body': 'false'
+
     'Regular Expression':
         'prefix': '~/'
         'body': '~/${1:<pattern>}/${2:<modifier>};$0'
