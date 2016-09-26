@@ -40,90 +40,6 @@
     'name': 'keyword.preprocessor.macro.haxe'
   }
   {
-    'match': '\\b(Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|EReg|Enum|Float|Hash|Int|IntHash|IntIter|Iterable|Iterator|Lambda|List|Math|Null|Reflect|Std|String|StringBuf|StringTools|Type|UInt|ValueType|Void|Xml|XmlType)\\b'
-    'name': 'support.class.haxe'
-  }
-  {
-    'match': '\\b(FastCell|FastList|Firebug|Http|Int32|Log|Md5|PosInfos|Public|Resource|Serializer|Stack|StackItem|Template|Timer|TimerQueue|TypeResolver|Unserializer)\\b'
-    'name': 'support.class.haxe.haxe'
-  }
-  {
-    'match': '\\b(Bytes|BytesBuffer|BytesData|BytesInput|BytesOutput|Eof|Error|Input|Output|StringInput)\\b'
-    'name': 'support.class.haxe.io'
-  }
-  {
-    'match': '\\b(AMFConnection|AsyncAdapter|AsyncConnection|AsyncDebugConnection|AsyncProxy|Connection|Context|ContextAll|DelayedConnection|ExternalConnection|FlashJsConnection|HttpAsyncConnection|HttpConnection|LocalConnection|Proxy|Socket|SocketConnection|SocketProtocol|SocketWrapper|SyncSocketConnection)\\b'
-    'name': 'support.class.haxe.haxe.remoting'
-  }
-  {
-    'match': '\\b(CType|ClassField|Classdef|EnumField|Enumdef|Generic|Infos|Path|PathParams|Platforms|Rights|TypeApi|TypeInfos|TypeParams|TypeRoot|TypeTree|Typedef|XmlParser)\\b'
-    'name': 'support.class.haxe.haxe.rtti'
-  }
-  {
-    'match': '\\b(TestCase|TestResult|TestRunner|TestStatus)\\b'
-    'name': 'support.class.haxe.haxe.unit'
-  }
-  {
-    'match': '\\b(Attrib|Check|Fast|Filter|Proxy|Rule)\\b'
-    'name': 'support.class.haxe.haxe.xml'
-  }
-  {
-    'match': '\\b(Anchor|Body|Boot|Button|Checkbox|Document|Dom|Event|FileUpload|Form|FormElement|Frame|Frameset|Hidden|History|HtmlCollection|HtmlDom|IFrame|Image|Lib|Link|Location|MetaDom|Navigator|Option|Password|Radio|Reset|SWFObject|Screen|Select|Selection|Style|StyleSheet|Submit|Text|Textarea|Window|XMLHttpRequest|XMLSocket)\\b'
-    'name': 'support.class.haxe.js'
-  }
-  {
-    'match': '\\b(Boot|FileKind|FileStat|FileSystem|Lib|Random|Sys|Utf8|Web)\\b'
-    'name': 'support.class.haxe.neko'
-  }
-  {
-    'match': '\\b(Connection|Manager|MySql|Object|ResultSet|Sqlite|Transaction)\\b'
-    'name': 'support.class.haxe.neko.db'
-  }
-  {
-    'match': '\\b(File|FileHandle|FileInput|FileOutput|FileSeek|Path|Process)\\b'
-    'name': 'support.class.haxe.neko.io'
-  }
-  {
-    'match': '\\b(Host|Poll|ProxyDetect|Proxysettings|ServerLoop|Socket|SocketHandle|SocketInput|SocketOutput|ThreadRemotingServer|ThreadServer)\\b'
-    'name': 'support.class.haxe.neko.net'
-  }
-  {
-    'match': '\\b(Deque|Gc|Loader|LoaderHandle|Lock|Module|ModuleHandle|Mutex|Thread|ThreadHandle|Tls|Ui)\\b'
-    'name': 'support.class.haxe.neko.vm'
-  }
-  {
-    'match': '\\b(CRC32|Compress|Flush|Reader|Uncompress|Writer|ZipEntry)\\b'
-    'name': 'support.class.haxe.neko.zip'
-  }
-  {
-    'match': '\\b(Boot|CacheLimiter|Exception|FileKind|FileStat|FileSystem|HException|IniHash|Lib|Session|Sys|Utf8|Web)\\b'
-    'name': 'support.class.haxe.php'
-  }
-  {
-    'match': '\\b(Connection|DBase|Field|FieldType|Manager|Mysql|Object|ResultSet|Sqlite)\\b'
-    'name': 'support.class.haxe.php.db'
-  }
-  {
-    'match': '\\b(File|FileHandle|FileInput|FileOutput|FileSeek|Path|Process)\\b'
-    'name': 'support.class.haxe.php.io'
-  }
-  {
-    'match': '\\b(Host|Socket|SocketDomain|SocketHandle|SocketInput|SocketOutput|Process)\\b'
-    'name': 'support.class.haxe.php.net'
-  }
-  {
-    'match': '\\b(HtmlPrinter|Main)\\b'
-    'name': 'support.class.haxe.tools.haxedoc'
-  }
-  {
-    'match': '\\b(Answer|Datas|Developer|Main|Progress|ProgressIn|Project|ProjectInfos|ProjectManager|Remoting_SiteApi|Site|SiteApi|SiteDb|SiteProxy|User|UserInfos|Version|VersionInfos|VersionManager|XmlInfos)\\b'
-    'name': 'support.class.haxe.tools.haxelib'
-  }
-  {
-    'match': '\\b(Main|Progress)\\b'
-    'name': 'support.class.haxe.tools.hxinst'
-  }
-  {
     'match': '\\b(trace|this|super|untyped)\\b'
     'name': 'support.function.haxe'
   }
@@ -448,10 +364,6 @@
       {
         'match': '\\b__(init|name|ename|super|unprotect|constructs|class|enum)__\\b'
         'name': 'support.variable.magic.haxe'
-      }
-      {
-        'match': '\\b(Array|ArrayAccess|Bool|Class|Date|DateTools|Dynamic|EReg|Enum|EnumValue|Float|IMap|Int|IntIterator|Iterable|Iterator|Lambda|List|Math|Null|Reflect|Single|Std|String|StringBuf|StringTools|Sys|Type|UInt|ValueType|Void|Xml|XmlType|TBool|TInt|TFloat|TFunction|TObject|TEnum|TClass|TNull|TUnknown)\\b'
-        'name': 'support.class.haxe'
       }
       {
         'include': '#storage'
