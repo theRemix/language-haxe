@@ -24,6 +24,7 @@ describe "Haxe Grammar", ->
             grammar = atom.grammars.grammarForScopeName("source.haxe")
 
     it "parses the grammar", ->
+        expect(grammar).toBeDefined()
         expect(grammar).toBeTruthy()
         expect(grammar.scopeName).toBe "source.haxe"
         expect(grammar.name).toBe "Haxe"
@@ -35,8 +36,7 @@ describe "Haxe Grammar", ->
             it "tokenizes the #{keyword} keyword", ->
                 {tokens} = grammar.tokenizeLine(keyword)
                 # TODO
-                #expect(tokens[0]).toEqual value: '$break', scopes: ['source.haxe']
-                #expect(tokens[0]).toEqual value: keyword, scopes: ['source.haxe','keyword.control.haxe.flow-control.2']
+                expect(tokens[0]).toEqual value: keyword, scopes: ['source.haxe','keyword.control.haxe.flow-control.2']
 
     describe "numbers", ->
         it "tokenizes hexadecimals", ->
