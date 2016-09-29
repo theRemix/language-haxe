@@ -218,3 +218,313 @@
     'prefix': 'version'
     'body': '-version\n$0'
     'description': 'Print version and exit'
+
+  'hxml -D absolute-path':
+    'prefix': 'D absolute-path'
+    'body': '-D absolute-path\n$0'
+    'description': 'Print absolute file path in trace output'
+  'hxml -D advanced-telemetry':
+    'prefix': 'D advanced-telemetry'
+    'body': '-D advanced-telemetry\n$0'
+    'description': 'Allow the SWF to be measured with Monocle tool'
+  'hxml -D analyzer':
+    'prefix': 'D analyzer'
+    'body': '-D analyzer\n$0'
+    'description': 'Use static analyzer for optimization (experimental)'
+  'hxml -D as3':
+    'prefix': 'D as3'
+    'body': '-D as3\n$0'
+    'description': 'Defined when outputing flash9 as3 source code'
+  'hxml -D check-xml-proxy':
+    'prefix': 'D check-xml-proxy'
+    'body': '-D check-xml-proxy\n$0'
+    'description': 'Check the used fields of the xml proxy'
+  'hxml -D core-api':
+    'prefix': 'D core-api'
+    'body': '-D core-api\n$0'
+    'description': 'Defined in the core api context'
+  'hxml -D core-api-serialize':
+    'prefix': 'D core-api-serialize'
+    'body': '-D core-api-serialize\n$0'
+    'description': 'Mark some generated core api classes with the Serializable attribute on C#'
+  'hxml -D cppia':
+    'prefix': 'D cppia'
+    'body': '-D cppia\n$0'
+    'description': 'Generate experimental cpp instruction assembly'
+  'hxml -D dce':
+    'prefix': 'D dce'
+    'body': '-D dce=${1:[std|full|no]}\n$0'
+    'description': 'Set the dead code elimination mode (default std)'
+  'hxml -D dce-debug':
+    'prefix': 'D dce-debug'
+    'body': '-D dce-debug\n$0'
+    'description': 'Show dead code elimination log'
+  'hxml -D debug':
+    'prefix': 'D debug'
+    'body': '-D debug\n$0'
+    'description': 'Activated when compiling with -debug'
+  'hxml -D display':
+    'prefix': 'D display'
+    'body': '-D display\n$0'
+    'description': 'Activated during completion'
+  'hxml -D dll-export':
+    'prefix': 'D dll-export'
+    'body': '-D dll-export\n$0'
+    'description': 'GenCPP experimental linking'
+  'hxml -D dll-import':
+    'prefix': 'D dll-import'
+    'body': '-D dll-import\n$0'
+    'description': 'GenCPP experimental linking'
+  'hxml -D doc-gen':
+    'prefix': 'D doc-gen'
+    'body': '-D doc-gen\n$0'
+    'description': 'Do not perform any removal/change in order to correctly generate documentation'
+  'hxml -D dump':
+    'prefix': 'D dump'
+    'body': '-D dump\n$0'
+    'description': 'Dump the complete typed AST for internal debugging in a dump subdirectory - use dump=pretty for Haxe-like formatting'
+  'hxml -D dump-dependencies':
+    'prefix': 'D dump-dependencies'
+    'body': '-D dump-dependencies\n$0'
+    'description': 'Dump the classes dependencies in a dump subdirectory'
+  'hxml -D dump-ignore-var-ids':
+    'prefix': 'D dump-ignore-var-ids'
+    'body': '-D dump-ignore-var-ids\n$0'
+    'description': 'Remove variable IDs from non-pretty dumps (helps with diff)'
+  'hxml -D erase-generics':
+    'prefix': 'D erase-generics'
+    'body': '-D erase-generics\n$0'
+    'description': 'Erase generic classes on C#'
+  'hxml -D fdb':
+    'prefix': 'D fdb'
+    'body': '-D fdb\n$0'
+    'description': 'Enable full flash debug infos for FDB interactive debugging'
+  'hxml -D file-extension':
+    'prefix': 'D file-extension'
+    'body': '-D file-extension\n$0'
+    'description': 'Output filename extension for cpp source code'
+  'hxml -D flash-use-stage':
+    'prefix': 'D flash-use-stage'
+    'body': '-D flash-use-stage\n$0'
+    'description': 'Keep the SWF library initial stage'
+  'hxml -D force-lib-check':
+    'prefix': 'D force-lib-check'
+    'body': '-D force-lib-check\n$0'
+    'description': 'Force the compiler to check -net-lib and -java-lib added classes (internal)'
+  'hxml -D force-native-property':
+    'prefix': 'D force-native-property'
+    'body': '-D force-native-property\n$0'
+    'description': 'Tag all properties with :nativeProperty metadata for 3.1 compatibility'
+  'hxml -D format-warning':
+    'prefix': 'D format-warning'
+    'body': '-D format-warning\n$0'
+    'description': 'Print a warning for each formated string, for 2.x compatibility'
+  'hxml -D gencommon-debug':
+    'prefix': 'D gencommon-debug'
+    'body': '-D gencommon-debug\n$0'
+    'description': 'GenCommon internal'
+  'hxml -D haxe-boot':
+    'prefix': 'D haxe-boot'
+    'body': '-D haxe-boot\n$0'
+    'description': 'Given the name `haxe` to the flash boot class instead of a generated name'
+  'hxml -D haxe-ver':
+    'prefix': 'D haxe-ver'
+    'body': '-D haxe-ver\n$0'
+    'description': 'The current Haxe version value'
+  'hxml -D hxcpp-api-level':
+    'prefix': 'D hxcpp-api-level'
+    'body': '-D hxcpp-api-level\n$0'
+    'description': 'Provided to allow compatibility between hxcpp versions'
+  'hxml -D include-prefix':
+    'prefix': 'D include-prefix'
+    'body': '-D include-prefix\n$0'
+    'description': 'Prepend path to generated include files'
+  'hxml -D interp':
+    'prefix': 'D interp'
+    'body': '-D interp\n$0'
+    'description': 'The code is compiled to be run with --interp'
+  'hxml -D java-ver':
+    'prefix': 'D java-ver'
+    'body': '-D java-ver=${1:[version:5-7]}\n$0'
+    'description': 'Sets the Java version to be targeted'
+  'hxml -D js-classic':
+    'prefix': 'D js-classic'
+    'body': '-D js-classic\n$0'
+    'description': 'Don`t use a function wrapper and strict mode in JS output'
+  'hxml -D js-es5':
+    'prefix': 'D js-es5'
+    'body': '-D js-es5\n$0'
+    'description': 'Generate JS for ES5-compliant runtimes'
+  'hxml -D js-unflatten':
+    'prefix': 'D js-unflatten'
+    'body': '-D js-unflatten\n$0'
+    'description': 'Generate nested objects for packages and types'
+  'hxml -D keep-old-output':
+    'prefix': 'D keep-old-output'
+    'body': '-D keep-old-output\n$0'
+    'description': 'Keep old source files in the output directory (for C#/Java)'
+  'hxml -D loop-unroll-max-cost':
+    'prefix': 'D loop-unroll-max-cost'
+    'body': '-D loop-unroll-max-cost\n$0'
+    'description': 'Maximum cost (number of expressions * iterations) before loop unrolling is canceled (default 250)'
+  'hxml -D macro':
+    'prefix': 'D macro'
+    'body': '-D macro\n$0'
+    'description': 'Defined when code is compiled in the macro context'
+  'hxml -D macro-times':
+    'prefix': 'D macro-times'
+    'body': '-D macro-times\n$0'
+    'description': 'Display per-macro timing when used with --times'
+  'hxml -D net-ver':
+    'prefix': 'D net-ver'
+    'body': '-D net-ver\n$0'
+    'description': 'Sets the .NET version to be targeted'
+  'hxml -D net-target':
+    'prefix': 'D net-target'
+    'body': '-D net-target=${1:<name>}\n$0'
+    'description': 'Sets the .NET target. Defaults to net. xbox, micro (Micro Framework, compact (Compact Framework) are some valid values'
+  'hxml -D neko-source':
+    'prefix': 'D neko-source'
+    'body': '-D neko-source\n$0'
+    'description': 'Output neko source instead of bytecode'
+  'hxml -D neko-v1':
+    'prefix': 'D neko-v1'
+    'body': '-D neko-v1\n$0'
+    'description': 'Keep Neko 1.x compatibility'
+  'hxml -D network-sandbox':
+    'prefix': 'D network-sandbox'
+    'body': '-D network-sandbox\n$0'
+    'description': 'Use local network sandbox instead of local file access one'
+  'hxml -D no-compilation':
+    'prefix': 'D no-compilation'
+    'body': '-D no-compilation\n$0'
+    'description': 'Disable CPP final compilation'
+  'hxml -D no-copt':
+    'prefix': 'D no-copt'
+    'body': '-D no-copt\n$0'
+    'description': 'Disable completion optimization (for debug purposes)'
+  'hxml -D no-debug':
+    'prefix': 'D no-debug'
+    'body': '-D no-debug\n$0'
+    'description': 'Remove all debug macros from cpp output'
+  'hxml -D no-deprecation-warnings':
+    'prefix': 'D no-deprecation-warnings'
+    'body': '-D no-deprecation-warnings\n$0'
+    'description': 'Do not warn if fields annotated with @:deprecated are used'
+  'hxml -D no-flash-override':
+    'prefix': 'D no-flash-override'
+    'body': '-D no-flash-override\n$0'
+    'description': 'Change overrides on some basic classes into HX suffixed methods flash only'
+  'hxml -D no-opt':
+    'prefix': 'D no-opt'
+    'body': '-D no-opt\n$0'
+    'description': 'Disable optimizations'
+  'hxml -D no-pattern-matching':
+    'prefix': 'D no-pattern-matching'
+    'body': '-D no-pattern-matching\n$0'
+    'description': 'Disable pattern matching'
+    'descriptionMoreURL': 'https://haxe.org/manual/lf-pattern-matching.html'
+  'hxml -D no-inline':
+    'prefix': 'D no-inline'
+    'body': '-D no-inline\n$0'
+    'description': 'Disable inlining'
+  'hxml -D no-root':
+    'prefix': 'D no-root'
+    'body': '-D no-root\n$0'
+    'description': 'GenCS internal'
+  'hxml -D no-macro-cache':
+    'prefix': 'D no-macro-cache'
+    'body': '-D no-macro-cache\n$0'
+    'description': 'Disable macro context caching'
+  'hxml -D no-simplify':
+    'prefix': 'D no-simplify'
+    'body': '-D no-simplify\n$0'
+    'description': 'Disable simplification filter'
+  'hxml -D no-swf-compress':
+    'prefix': 'D no-swf-compress'
+    'body': '-D no-swf-compress\n$0'
+    'description': 'Disable SWF output compression'
+  'hxml -D no-traces':
+    'prefix': 'D no-traces'
+    'body': '-D no-traces\n$0'
+    'description': 'Disable all trace calls'
+  'hxml -D php-prefix':
+    'prefix': 'D php-prefix'
+    'body': '-D php-prefix\n$0'
+    'description': 'Compiled with --php-prefix'
+  'hxml -D real-position':
+    'prefix': 'D real-position'
+    'body': '-D real-position\n$0'
+    'description': 'Disables haxe source mapping when targetting C#'
+  'hxml -D replace-files':
+    'prefix': 'D replace-files'
+    'body': '-D replace-files\n$0'
+    'description': 'GenCommon internal'
+  'hxml -D shallow-expose':
+    'prefix': 'D shallow-expose'
+    'body': '-D shallow-expose\n$0'
+    'description': 'Expose types to surrounding scope of Haxe generated closure without writing to window object'
+  'hxml -D source-map-content':
+    'prefix': 'D source-map-content'
+    'body': '-D source-map-content\n$0'
+    'description': 'Include the hx sources as part of the JS source map'
+  'hxml -D swc':
+    'prefix': 'D swc'
+    'body': '-D swc\n$0'
+    'description': 'Output a SWC instead of a SWF'
+  'hxml -D swf-compress-level':
+    'prefix': 'D swf-compress-level'
+    'body': '-D swf-compress-level=${1:<1-9>}\n$0'
+    'description': 'Set the amount of compression for the SWF output'
+  'hxml -D swf-debug-password':
+    'prefix': 'D swf-debug-password=${1:<yourPassword>}'
+    'body': '-D swf-debug-password\n$0'
+    'description': 'Set a password for debugging. The password field is encrypted by using the MD5 algorithm and prevents unauthorised debugging of your swf. Without this flag -D fdb will use no password.'
+  'hxml -D swf-direct-blit':
+    'prefix': 'D swf-direct-blit'
+    'body': '-D swf-direct-blit\n$0'
+    'description': 'Use hardware acceleration to blit graphics'
+  'hxml -D swf-gpu':
+    'prefix': 'D swf-gpu'
+    'body': '-D swf-gpu\n$0'
+    'description': 'Use GPU compositing features when drawing graphics'
+  'hxml -D swf-metadata':
+    'prefix': 'D swf-metadata'
+    'body': '-D swf-metadata=${1:<file.xml>}\n$0'
+    'description': 'Include contents of <file.xml> as metadata in the swf'
+  'hxml -D swf-preloader-frame':
+    'prefix': 'D swf-preloader-frame'
+    'body': '-D swf-preloader-frame\n$0'
+    'description': 'Insert empty first frame in swf. To be used together with -D flash-use-stage and -swf-lib'
+  'hxml -D swf-protected':
+    'prefix': 'D swf-protected'
+    'body': '-D swf-protected\n$0'
+    'description': 'Compile Haxe private as protected in the SWF instead of public'
+  'hxml -D swf-script-timeout':
+    'prefix': 'D swf-script-timeout'
+    'body': '-D swf-script-timeout\n$0'
+    'description': 'Maximum ActionScript processing time before script stuck dialog box displays (in seconds)'
+  'hxml -D swf-use-doabc':
+    'prefix': 'D swf-use-doabc'
+    'body': '-D swf-use-doabc\n$0'
+    'description': 'Use DoAbc swf-tag instead of DoAbcDefine'
+  'hxml -D sys':
+    'prefix': 'D sys'
+    'body': '-D sys\n$0'
+    'description': 'Defined for all system platforms'
+  'hxml -D unsafe':
+    'prefix': 'D unsafe'
+    'body': '-D unsafe\n$0'
+    'description': 'Allow unsafe code when targeting C#'
+  'hxml -D use-nekoc':
+    'prefix': 'D use-nekoc'
+    'body': '-D use-nekoc\n$0'
+    'description': 'Use nekoc compiler instead of internal one'
+  'hxml -D use-rtti-doc':
+    'prefix': 'D use-rtti-doc'
+    'body': '-D use-rtti-doc\n$0'
+    'description': 'Allows access to documentation during compilation'
+  'hxml -D vcproj':
+    'prefix': 'D vcproj'
+    'body': '-D vcproj\n$0'
+    'description': 'GenCPP internal'
