@@ -1,4 +1,4 @@
-'.source.hx':
+'.source.haxe':
   'editor':
     'commentStart': '// '
     'foldEndPattern': '^\\s*\\}|^\\s*\\]|^\\s*\\)'

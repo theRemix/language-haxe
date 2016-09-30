@@ -46,6 +46,9 @@
     'false':
         'prefix': 'false'
         'body': 'false'
+    'null':
+        'prefix': 'null'
+        'body': 'null'
 
     'Regular Expression':
         'prefix': '~/'
