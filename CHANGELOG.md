@@ -1,3 +1,9 @@
+## 0.5.2
+* Fix scope name
+* Snippets: null
+*	Snippets: hxml -D <v> definitions
+* Spec: fixes "tokenizes the #{keyword} keyword"
+
 ## 0.5.1
 *	Grammars cleanup
 * Remove std lib grammars
