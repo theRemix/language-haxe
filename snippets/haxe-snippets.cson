@@ -252,7 +252,7 @@
 
     'Array<T>':
         'prefix': 'Array'
-        'body': 'Array<${1:T}>()$0'
+        'body': 'Array<${1:T}>$0'
         'description': 'Collection of elements'
         'descriptionMoreURL': 'http://api.haxe.org/Array.html'
     'Class<T>':
@@ -260,9 +260,9 @@
         'body': 'Class<${1:T}>$0'
     'List<T>':
         'prefix': 'List'
-        'body': 'List<${1:T}>()$0'
+        'body': 'List<${1:T}>$0'
         'description': 'A linked-list of elements'
     'Map<K,V>':
         'prefix': 'Map'
-        'body': 'Map<${1:K},${2:V}>()$0'
+        'body': 'Map<${1:K},${2:V}>$0'
         'description': 'Key to value mapping for arbitrary value types'
