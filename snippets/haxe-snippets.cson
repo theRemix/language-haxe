@@ -262,7 +262,9 @@
         'prefix': 'List'
         'body': 'List<${1:T}>$0'
         'description': 'A linked-list of elements'
+        'descriptionMoreURL': 'http://api.haxe.org/List.html'
     'Map<K,V>':
         'prefix': 'Map'
         'body': 'Map<${1:K},${2:V}>$0'
         'description': 'Key to value mapping for arbitrary value types'
+        'descriptionMoreURL': 'http://api.haxe.org/Map.html'
