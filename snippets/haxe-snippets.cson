@@ -34,7 +34,7 @@
 
     'Line Comment Start':
         'prefix': '//'
-        'body': '// ${1: }\n$0'
+        'body': '// ${1:}$0'
     'Block Comment Start':
         'prefix': '/**'
         'body': '/**\n\t$1\n*/$0'
