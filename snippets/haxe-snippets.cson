@@ -34,7 +34,7 @@
 
     'Line Comment Start':
         'prefix': '//'
-        'body': '// ${1: }\n$0'
+        'body': '// ${1:}$0'
     'Block Comment Start':
         'prefix': '/**'
         'body': '/**\n\t$1\n*/$0'
@@ -58,10 +58,10 @@
 
     'package':
         'prefix': 'package '
-        'body': 'package ${1:<name>};\n\n$0'
+        'body': 'package ${1:<name>};$0'
     'import':
         'prefix': 'import'
-        'body': 'import ${1:<package>};\n$0'
+        'body': 'import ${1:<package>};$0'
         'description': 'Allow omitting the package name when using a type'
         'descriptionMoreURL': 'http://haxe.org/manual/type-system-import.html'
     'private':
@@ -126,13 +126,13 @@
 
     'try':
         'prefix': 'try'
-        'body': 'try {\n\t$1\n} catch(${2:e:Dynamic}) {\n\t${3:trace(e);}\n}\n$0'
+        'body': 'try {\n\t$1\n} catch(${2:e:Dynamic}) {\n\t${3:trace(e);}\n}$0'
     'catch':
         'prefix': 'catch'
         'body': 'catch(${1:e:Dynamic}) {\n\t${2:trace(e);}\n}\n$0'
     'throw':
         'prefix': 'throw'
-        'body': 'throw ${1:expr};\n$0'
+        'body': 'throw ${1:expr};$0'
 
     'autotyped var':
         'prefix': 'v'
@@ -171,7 +171,7 @@
 
     'function':
         'prefix': 'function'
-        'body': 'function ${1:name}( ${2:params} )${3: : ${4:Void}} \{\n\t$5\n\}\n$0'
+        'body': 'function ${1:name}( ${2:params} )${3: : ${4:Void}} \{\n\t$5\n\}$0'
     'method':
         'prefix': 'static function'
         'body': '${1:static }${2:inline }function ${3:name}($4)${5: : ${6:Void}} \{\n\t$0\n\}'
@@ -226,33 +226,33 @@
 
     'private function':
         'prefix': 'prf'
-        'body': 'private function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'private function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'private inline function':
         'prefix': 'prif'
-        'body': 'private inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'private inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'private static function':
         'prefix': 'prsf'
-        'body': 'private static function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'private static function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'private static inline function':
         'prefix': 'prsif'
-        'body': 'private static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'private static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
 
     'public function':
         'prefix': 'pf'
-        'body': 'public function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'public function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'public inline function':
         'prefix': 'pif'
-        'body': 'public inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'public inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'public static function':
         'prefix': 'psf'
-        'body': 'public static function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'public static function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
     'public static inline function':
         'prefix': 'psif'
-        'body': 'public static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}\n'
+        'body': 'public static inline function ${1:name}($2)${3: : ${4:Void}} {\n\t$0\n}'
 
     'Array<T>':
         'prefix': 'Array'
-        'body': 'Array<${1:T}>()$0'
+        'body': 'Array<${1:T}>$0'
         'description': 'Collection of elements'
         'descriptionMoreURL': 'http://api.haxe.org/Array.html'
     'Class<T>':
@@ -260,9 +260,11 @@
         'body': 'Class<${1:T}>$0'
     'List<T>':
         'prefix': 'List'
-        'body': 'List<${1:T}>()$0'
+        'body': 'List<${1:T}>$0'
         'description': 'A linked-list of elements'
+        'descriptionMoreURL': 'http://api.haxe.org/List.html'
     'Map<K,V>':
         'prefix': 'Map'
-        'body': 'Map<${1:K},${2:V}>()$0'
+        'body': 'Map<${1:K},${2:V}>$0'
         'description': 'Key to value mapping for arbitrary value types'
+        'descriptionMoreURL': 'http://api.haxe.org/Map.html'

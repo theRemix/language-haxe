@@ -1,7 +1,12 @@
+## 0.5.3
+* Snippets: remove unnecessary line endings
+* Snippets: description urls for Array/List/Map
+* Snippets: remove Array/List/Map parentheses
+
 ## 0.5.2
 * Fix scope name
 * Snippets: null
-*	Snippets: hxml -D <v> definitions
+* Snippets: hxml -D <v> definitions
 * Spec: fixes "tokenizes the #{keyword} keyword"
 
 ## 0.5.1
