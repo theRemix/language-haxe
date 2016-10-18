@@ -26,12 +26,6 @@
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
 
-    'trace':
-        'prefix': 'trace'
-        'body': 'trace( $1 );$0'
-        'description': 'Print information'
-        'descriptionMoreURL': 'http://haxe.org/manual/lf-trace-log.html'
-
     'Line Comment Start':
         'prefix': '//'
         'body': '// ${1:}$0'
@@ -39,6 +33,12 @@
         'prefix': '/**'
         'body': '/**\n\t$1\n*/$0'
         'description': 'Block comment'
+
+    'trace':
+        'prefix': 'trace'
+        'body': 'trace( $1 );$0'
+        'description': 'Print information'
+        'descriptionMoreURL': 'http://haxe.org/manual/lf-trace-log.html'
 
     'true':
         'prefix': 'true'
@@ -64,6 +64,11 @@
         'body': 'import ${1:<package>};$0'
         'description': 'Allow omitting the package name when using a type'
         'descriptionMoreURL': 'http://haxe.org/manual/type-system-import.html'
+    'using':
+        'prefix': 'using'
+        'body': 'using ${1:<package>};$0'
+        'description': 'Pseudo-extend existing types without modifying their source'
+        'descriptionMoreURL': 'https://haxe.org/manual/lf-static-extension.html'
     'private':
         'prefix': 'private'
         'body': 'private '
@@ -73,6 +78,8 @@
     'inline':
         'prefix': 'inline'
         'body': 'inline '
+        'description': 'Allow insert function body in place'
+        'descriptionMoreURL': 'https://haxe.org/manual/class-field-inline.html'
     'static':
         'prefix': 'static'
         'body': 'static '
@@ -106,7 +113,6 @@
     'while':
         'prefix': 'while'
         'body': 'while( ${1:true} ) {\n\t$2\n}$0'
-
     'do..while':
         'prefix': 'do '
         'body': 'do {\n\t$1\n} while( ${2:true} );$0'
@@ -119,10 +125,10 @@
 
     'for i in 0...end':
         'prefix': 'fori'
-        'body': 'for( ${1:var} in ${2:0}...${3:end} ) {\n\t${4:expr}\n}\n$0'
+        'body': 'for( ${1:var} in ${2:0}...${3:end} ) {\n\t${4:expr}\n}$0'
     'for a in b':
         'prefix': 'for'
-        'body': 'for( $1 in $2 ) {\n\t$3\n}\n$0'
+        'body': 'for( ${1:value} in ${2:iterable} ) {\n\t$3\n}\n$0'
 
     'try':
         'prefix': 'try'
@@ -133,6 +139,13 @@
     'throw':
         'prefix': 'throw'
         'body': 'throw ${1:expr};$0'
+
+    'cast':
+        'prefix': 'cast'
+        'body': 'cast( ${1:expr}, ${2:type} )$0'
+    'cast ':
+        'prefix': 'cast '
+        'body': 'cast ${1:expr}$0'
 
     'autotyped var':
         'prefix': 'v'
@@ -255,16 +268,83 @@
         'body': 'Array<${1:T}>$0'
         'description': 'Collection of elements'
         'descriptionMoreURL': 'http://api.haxe.org/Array.html'
+    'ArrayAccess<T>':
+        'prefix': 'ArrayAccess<T>'
+        'body': 'ArrayAccess<${1:T}>$0'
+    'Bool':
+        'prefix': 'Bool'
+        'body': 'Bool$0'
     'Class<T>':
         'prefix': 'Class'
         'body': 'Class<${1:T}>$0'
+    'Date':
+        'prefix': 'Date'
+        'body': 'Date$0'
+    'Dynamic':
+        'prefix': 'Dynamic'
+        'body': 'Dynamic$0'
+    'EReg':
+        'prefix': 'EReg'
+        'body': 'EReg( ${1:r}, ${2:opt} )$0'
+    'Float':
+        'prefix': 'Float'
+        'body': 'Float$0'
+    'Int':
+        'prefix': 'Int'
+        'body': 'Int$0'
     'List<T>':
         'prefix': 'List'
         'body': 'List<${1:T}>$0'
         'description': 'A linked-list of elements'
         'descriptionMoreURL': 'http://api.haxe.org/List.html'
     'Map<K,V>':
-        'prefix': 'Map'
+        'prefix': 'Map<K,V>'
         'body': 'Map<${1:K},${2:V}>$0'
         'description': 'Key to value mapping for arbitrary value types'
         'descriptionMoreURL': 'http://api.haxe.org/Map.html'
+    'Math':
+        'prefix': 'Math'
+        'body': 'Math$0'
+    'Null<T>':
+        'prefix': 'Null<T>'
+        'body': 'Null<${1:T}>$0'
+    'Reflect':
+        'prefix': 'Reflect'
+        'body': 'Reflect.$0'
+        'description': 'Runtime reflection of types and fields'
+        'descriptionMoreURL': 'http://haxe.org/manual/std-reflection.html'
+    'Single':
+        'prefix': 'Single'
+        'body': 'Single$0'
+        'description': 'Single-precision IEEE 32bit float (4-byte)'
+    'Std':
+        'prefix': 'Std'
+        'body': 'Std.$0'
+        'description': 'Standard methods for manipulating basic types'
+    'String':
+        'prefix': 'String'
+        'body': 'String$0'
+    'StringBuf':
+        'prefix': 'StringBuf'
+        'body': 'StringBuf$0'
+    'StringTools':
+        'prefix': 'StringTools'
+        'body': 'StringTools$0'
+    'Type':
+        'prefix': 'Type'
+        'body': 'Type$0'
+    'UInt':
+        'prefix': 'UInt'
+        'body': 'UInt$0'
+    'ValueType':
+        'prefix': 'ValueType'
+        'body': 'ValueType$0'
+    'Void':
+        'prefix': 'Void'
+        'body': 'Void$0'
+    'Xml':
+        'prefix': 'Xml'
+        'body': 'Xml$0'
+    'XmlType':
+        'prefix': 'XmlType'
+        'body': 'XmlType$0'
