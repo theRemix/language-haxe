@@ -108,7 +108,7 @@
         'body': 'default:\n\t${1:statement}'
     'return':
         'prefix': 'return'
-        'body': 'return $1;$0'
+        'body': 'return$0'
 
     'while':
         'prefix': 'while'
