@@ -112,7 +112,7 @@
         'body': 'do {\n\t$1\n} while( ${2:true} );$0'
     'continue':
         'prefix': 'continue'
-        'body': 'continue;\n$0'
+        'body': 'continue;$0'
     'break':
         'prefix': 'break'
         'body': 'break;'
