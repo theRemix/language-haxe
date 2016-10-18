@@ -2,27 +2,27 @@
 
     '#if':
         'prefix': '#if'
-        'body': '#if ${1:define}\n#end\n$0'
+        'body': '#if ${1:<flag>}\n#end$0'
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
     '#else':
         'prefix': '#else'
-        'body': '#else\n$0'
+        'body': '#else$0'
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
     '#elseif':
         'prefix': '#elseif'
-        'body': '#elseif ${1:define}\n${2}$0'
+        'body': '#elseif ${1:<flag>}$0'
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
     '#end':
         'prefix': '#end'
-        'body': '#end\n$0'
+        'body': '#end$0'
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
     '#else error':
         'prefix': '#error'
-        'body': '#error "${1:define}"$0'
+        'body': '#error "${1:<flag>}"$0'
         'description': 'Conditional Compilation'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-condition-compilation.html'
 
@@ -36,7 +36,7 @@
 
     'trace':
         'prefix': 'trace'
-        'body': 'trace( $1 );$0'
+        'body': 'trace( $1 )$0'
         'description': 'Print information'
         'descriptionMoreURL': 'http://haxe.org/manual/lf-trace-log.html'
 
@@ -182,6 +182,9 @@
         'prefix': 'set_'
         'body': 'function set_${1:name}(${2:v}:${3:Type}) : ${3:Type} \{\n\treturn $4;\n\}$0'
 
+    'dynamic':
+        'prefix': 'dynamic function'
+        'body': 'dynamic function ${1:<name>}($2) {}$0'
     'function':
         'prefix': 'function'
         'body': 'function ${1:name}( ${2:params} )${3: : ${4:Void}} \{\n\t$5\n\}$0'
