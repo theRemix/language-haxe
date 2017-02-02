@@ -1,3 +1,6 @@
+## 0.5.4
+* Update grammar to haxe 3.4.0-rc.1
+
 ## 0.5.3
 * Snippets: remove unnecessary line endings
 * Snippets: description urls for Array/List/Map
