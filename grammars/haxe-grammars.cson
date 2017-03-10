@@ -2,26 +2,63 @@
 'name': 'Haxe'
 'comment': 'Haxe 3 Syntax'
 'fileTypes': ['hx']
-'foldingStartMarker': '(\\{\\s*(//.*)?$|\\s*// \\{\\{\\{|#if)'
-'foldingEndMarker': '^\\s*(\\}|// \\}\\}\\}$|#end)'
+'foldingStartMarker': '(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{|#if)'
+'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$|#end)'
 'patterns': [
-  { 'include': '#comments' }
-  { 'include': '#strings' }
-  { 'include': '#regex' }
-  { 'include': '#control-flow' }
-  { 'include': '#constants' }
-  { 'include': '#user-constants' }
-  { 'include': '#classes' }
-  { 'include': '#packages' }
-  { 'include': '#typedefs' }
-  { 'include': '#function-definition' }
-  { 'include': '#variable-declaration' }
-  { 'include': '#variable-types' }
-  { 'include': '#class-names' }
-  { 'include': '#macros' }
-  { 'include': '#access' }
-  { 'include': '#operators' }
-  { 'include': '#support' }
+  {
+    'include': '#comments'
+  }
+  {
+    'include': '#strings'
+  }
+  {
+    'include': '#regex'
+  }
+  {
+    'include': '#control-flow'
+  }
+  {
+    'include': '#constants'
+  }
+  {
+    'include': '#user-constants'
+  }
+  {
+    'include': '#classes'
+  }
+  {
+    'include': '#packages'
+  }
+  {
+    'include': '#typedefs'
+  }
+  {
+    'include': '#function-definition'
+  }
+  {
+    'include': '#variable-declaration'
+  }
+  {
+    'include': '#variable-types'
+  }
+  {
+    'include': '#class-names'
+  }
+  {
+    'include': '#macros'
+  }
+  {
+    'include': '#access'
+  }
+  {
+    'include': '#operators'
+  }
+  {
+    'include': '#support'
+  }
+  {
+    'include': '#field-completions'
+  }
   # Keywords
   # Put here so they highlight before writer finishes
   # the entire statement containing them.
@@ -91,8 +128,12 @@ Repository - A dictionary of includable patterns.
   # Classes
   'classes':
     'patterns': [
-      { 'include': '#class-definitions' }
-      { 'include': '#class-constructors' }
+      {
+        'include': '#class-definitions'
+      }
+      {
+        'include': '#class-constructors'
+      }
     ]
   # Class Definitions
   'class-definitions':
@@ -106,7 +147,9 @@ Repository - A dictionary of includable patterns.
             'name': 'entity.name.type.class.haxe'
         'end': '>'
         'patterns': [
-          { 'include': '#type-params' }
+          {
+            'include': '#type-params'
+          }
         ]
       }
       {
@@ -128,7 +171,9 @@ Repository - A dictionary of includable patterns.
             'name': 'entity.name.type.class.haxe'
         'end': '>'
         'patterns': [
-          { 'include': '#type-params' }
+          {
+            'include': '#type-params'
+          }
         ]
       }
       {
@@ -154,7 +199,9 @@ Repository - A dictionary of includable patterns.
             'name': 'storage.type.class.haxe'
         'end': '\\s*>'
         'patterns': [
-          { 'include': '#class-names' }
+          {
+            'include': '#class-names'
+          }
         ]
       }
       {
@@ -176,7 +223,9 @@ Repository - A dictionary of includable patterns.
             'name': 'storage.type.class.haxe'
         'end': '\\s*>'
         'patterns': [
-          { 'include': '#class-names' }
+          {
+            'include': '#class-names'
+          }
         ]
       }
       {
@@ -225,6 +274,19 @@ Repository - A dictionary of includable patterns.
   # Control Flow
   'control-flow':
     'patterns': [
+      {
+        'captures':
+          '1':
+            'name': 'keyword.control.haxe.flow-control.2'
+        'match': '\\b(if|return|while|for)\\b\\s*\\('
+      }
+      {
+        'match': '\\b(return|break|case|continue|default|do|while|for|switch|if|else)\\b'
+        'name': 'keyword.control.haxe.flow-control.2'
+      }
+      # The following entries in patterns will not be reached because the above
+      # two handle the keywords below.
+      # The only exception is ...
       # if, else if, else
       {
         'match': '\\b(if|else if|else)\\b'
@@ -284,7 +346,9 @@ Repository - A dictionary of includable patterns.
             'name': 'entity.name.function.haxe'
         'end': '>'
         'patterns': [
-          { 'include': '#type-params' }
+          {
+            'include': '#type-params'
+          }
         ]
       }
       {
@@ -430,7 +494,9 @@ Repository - A dictionary of includable patterns.
             'name': 'storage.type.class.haxe'
         'end': '\\s*='
         'patterns': [
-          { 'include': '#type-params' }
+          {
+            'include': '#type-params'
+          }
         ]
       }
     ]
@@ -445,7 +511,9 @@ Repository - A dictionary of includable patterns.
             'name': 'entity.name.type.class.haxe'
         'end': '\\s*>(?![\\w\\.])'
         'patterns': [
-          { 'include': '#type-params' }
+          {
+            'include': '#type-params'
+          }
         ]
       }
       {
@@ -491,8 +559,14 @@ Repository - A dictionary of includable patterns.
       'begin': '(:|->)\\s*'
       'end': '(?!\\w)'
       'patterns': [
-        { 'include': '#user-constants' }
-        { 'include': '#type-params' }
-        { 'include': '$self' }
+        {
+          'include': '#user-constants'
+        }
+        {
+          'include': '#type-params'
+        }
+        {
+          'include': '$self'
+        }
       ]
     ]
