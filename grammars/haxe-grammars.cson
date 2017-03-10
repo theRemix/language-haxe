@@ -212,6 +212,11 @@ Repository - A dictionary of includable patterns.
           '2':
             'name': 'storage.type.class.haxe'
       }
+      # We want to highlight this even before the class name is written.
+      {
+        'match': '\\b(new)\\b'
+        'name': 'keyword.other.variable.haxe'
+      }
     ]
   # Class names
   'class-names':
@@ -330,10 +335,16 @@ Repository - A dictionary of includable patterns.
             'include': '#constants'
           }
           {
+            'include': '#user-constants'
+          }
+          {
             'include': '#strings'
           }
           {
             'include': '#class-constructors'
+          }
+          {
+            'include': '#class-names'
           }
           {
             'include': '#control-flow'
@@ -368,6 +379,10 @@ Repository - A dictionary of includable patterns.
             'name': 'storage.type.function.haxe'
           '2':
             'name': 'entity.name.function.haxe'
+      }
+      {
+        'match': '\\b(function)\\b'
+        'name': 'storage.type.function.haxe'
       }
     ]
   # Operators
