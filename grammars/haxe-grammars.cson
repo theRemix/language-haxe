@@ -284,9 +284,12 @@ Repository - A dictionary of includable patterns.
         'match': '\\b(return|break|case|continue|default|do|while|for|switch|if|else)\\b'
         'name': 'keyword.control.haxe.flow-control.2'
       }
+      {
+        'match': '\\.\\.\\.'
+        'name': 'keyword.control.directive.haxe'
+      }
       # The following entries in patterns will not be reached because the above
       # two handle the keywords below.
-      # The only exception is ...
       # if, else if, else
       {
         'match': '\\b(if|else if|else)\\b'
@@ -315,8 +318,12 @@ Repository - A dictionary of includable patterns.
   'field-completions':
     'patterns': [
       {
-        'begin': '\\.|(?<!if|while|return|for)\\s*\\(\\b'
-        'end': '\\s|\\n|;'
+        'match': '\\.[A-Za-z_]\\w+\\b'
+        'name': 'meta.scope.field-completions.haxe'
+      }
+      {
+        'begin': '(?<!if|while|return|for)\\s*\\(\\b'
+        'end': '\\)'
         'name': 'meta.scope.field-completions.haxe'
         'patterns': [
           {
@@ -326,10 +333,13 @@ Repository - A dictionary of includable patterns.
             'include': '#strings'
           }
           {
-            'include': '#constructor'
+            'include': '#class-constructors'
           }
           {
-            'include': '#keywords'
+            'include': '#control-flow'
+          }
+          {
+            'include': '#operators'
           }
         ]
       }
