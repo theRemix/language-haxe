@@ -323,11 +323,17 @@ Repository - A dictionary of includable patterns.
   'field-completions':
     'patterns': [
       {
-        'match': '\\.[A-Za-z_]\\w+\\b'
+        'begin': '\\.'
+        'end': '\\b'
         'name': 'meta.scope.field-completions.haxe'
+        'patterns': [
+          {
+            'include': '#user-constants';
+          }
+        ]
       }
       {
-        'begin': '(?<!if|while|return|for)\\s*\\(\\b'
+        'begin': '(?<!if|while|return|for)\\s*\\('
         'end': '\\)'
         'name': 'meta.scope.field-completions.haxe'
         'patterns': [
@@ -552,7 +558,7 @@ Repository - A dictionary of includable patterns.
   'user-constants':
     'patterns': [
       {
-        'match': '\\b(var)\\s+([A-Z_][A-Z0-9_]+)\\b'
+        'match': '\\b(var)\\s+([A-Z_][A-Z0-9_]*)\\b'
         'captures':
           '1':
             'name': 'keyword.other.variable.haxe'
@@ -560,7 +566,7 @@ Repository - A dictionary of includable patterns.
             'name': 'constant.user-defined.haxe'
       }
       {
-        'match': '\\b[A-Z_][A-Z0-9_]+\\b'
+        'match': '\\b[A-Z_][A-Z0-9_]*\\b'
         'name': 'constant.user-defined.haxe'
       }
     ]
