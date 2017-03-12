@@ -1,3 +1,8 @@
+## 0.6.0
+* Snippets: cast, dynamic, using
+* Snippets: std library top level definitions
+* Grammars: recognises interpreter directives, emacs modelines, vim modelines
+
 ## 0.5.4
 * Update grammar to haxe 3.4.0-rc.1
 

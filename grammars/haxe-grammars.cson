@@ -2,6 +2,25 @@
 'name': 'Haxe'
 'comment': 'Haxe Syntax: version 3.3.0'
 'fileTypes': ['hx']
+'firstLineMatch': '''(?x)
+  # Hashbang
+  ^\\#!.*(?:\\s|\\/)
+    haxe
+  (?:$|\\s)
+  |
+  # Modeline
+  (?i:
+    # Emacs
+    -\\*-(?:\\s*(?=[^:;\\s]+\\s*-\\*-)|(?:.*?[;\\s]|(?<=-\\*-))mode\\s*:\\s*)
+      haxe
+    (?=[\\s;]|(?<![-*])-\\*-).*?-\\*-
+    |
+    # Vim
+    (?:(?:\\s|^)vi(?:m[<=>]?\\d+|m)?|\\sex)(?=:(?=\\s*set?\\s[^\\n:]+:)|:(?!\\s*set?\\s))(?:(?:\\s|\\s*:\\s*)\\w*(?:\\s*=(?:[^\\n\\\\\\s]|\\\\.)*)?)*[\\s:](?:filetype|ft|syntax)\\s*=
+      haxe
+    (?=\\s|:|$)
+  )
+'''
 'foldingStartMarker': '(\\{\\s*(//.*)?$|^\\s*// \\{\\{\\{|#if)'
 'foldingStopMarker': '^\\s*(\\}|// \\}\\}\\}$|#end)'
 'patterns': [
