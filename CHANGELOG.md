@@ -1,3 +1,8 @@
+## 0.6.0
+* Snippets: cast, dynamic, using
+* Snippets: std library top level definitions
+* Grammars: recognises interpreter directives, emacs modelines, vim modelines
+
 ## 0.5.3
 * Snippets: remove unnecessary line endings
 * Snippets: description urls for Array/List/Map
