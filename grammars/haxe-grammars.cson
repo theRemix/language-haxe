@@ -438,7 +438,7 @@ Repository - A dictionary of includable patterns.
         'match': '\\b(package)\\s+((([a-z]+)\\.)*([a-z]+))\\b'
         'captures':
           '1':
-            'name': 'storage.type.package.haxe'
+            'name': 'keyword.type.package.haxe'
           '2':
             'name': 'entity.name.type.package.haxe'
           '3':
@@ -469,6 +469,10 @@ Repository - A dictionary of includable patterns.
       {
         'match': '\\b(?:import|using|as|in)\\b'
         'name': 'keyword.type.import.haxe';
+      }
+      {
+        'match': '\\b(?:package)\\b'
+        'name': 'keyword.type.package.haxe'
       }
     ]
   'regex':
