@@ -445,26 +445,30 @@ Repository - A dictionary of includable patterns.
             'name': 'entity.name.type.class.haxe'
       }
       {
-        'match': '\\b(import)\\s+(([a-z]+\\.)*([A-Z]\\w*))(\\.([A-Z]\\w*))?(\\s+(as|in)\\s+([A-Z]\\w*))?'
+        'match': '\\b(import|using)\\s+(([a-z]+\\.)*([A-Z]\\w*))(\\.([A-Z]\\w*))?(\\s+(as|in)\\s+([A-Z]\\w*))?'
         'captures':
           '1':
-            'name': 'storage.type.import.haxe'
+            'name': 'keyword.type.import.haxe'
           '2':
             'name': 'entity.name.type.package.haxe'
           '6':
             'name': 'entity.name.type.class.haxe'
           '8':
-            'name': 'storage.type.import.haxe'
+            'name': 'keyword.type.import.haxe'
           '9':
             'name': 'entity.name.type.class.haxe'
       }
       {
-        'match': '\\b(import)\\s+(([a-z]+\\.)*[a-z]+(\\.\\*)?)'
+        'match': '\\b(import|using)\\s+(([a-z]+\\.)*[a-z]+(\\.\\*)?)'
         'captures':
           '1':
-            'name': 'storage.type.import.haxe'
+            'name': 'keyword.type.import.haxe'
           '2':
             'name': 'entity.name.type.package.haxe'
+      }
+      {
+        'match': '\\b(?:import|using|as|in)\\b'
+        'name': 'keyword.type.import.haxe';
       }
     ]
   'regex':
