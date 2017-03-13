@@ -18,6 +18,9 @@
     'include': '#keywords'
   }
   {
+    'include': '#operators'
+  }
+  {
     'include': '#constants'
   }
   {
@@ -49,9 +52,6 @@
   }
   {
     'include': '#access'
-  }
-  {
-    'include': '#operators'
   }
   {
     'include': '#support'
@@ -294,6 +294,9 @@ Repository - A dictionary of includable patterns.
         'name': 'meta.scope.field-completions.haxe'
         'patterns': [
           {
+            'include': '#operators'
+          }
+          {
             'include': '#constants'
           }
           {
@@ -303,6 +306,9 @@ Repository - A dictionary of includable patterns.
             'include': '#strings'
           }
           {
+            'include': '#function-definition'
+          }
+          {
             'include': '#class-constructors'
           }
           {
@@ -310,9 +316,6 @@ Repository - A dictionary of includable patterns.
           }
           {
             'include': '#keywords'
-          }
-          {
-            'include': '#operators'
           }
         ]
       }
