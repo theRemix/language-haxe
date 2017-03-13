@@ -15,7 +15,7 @@
     'include': '#regex'
   }
   {
-    'include': '#control-flow'
+    'include': '#keywords'
   }
   {
     'include': '#constants'
@@ -276,50 +276,6 @@ Repository - A dictionary of includable patterns.
         'name': 'constant.numeric.haxe'
       }
     ]
-  # Control Flow
-  'control-flow':
-    'patterns': [
-      {
-        'captures':
-          '1':
-            'name': 'keyword.control.haxe.flow-control.2'
-        'match': '\\b(if|return|while|for)\\b\\s*\\('
-      }
-      {
-        'match': '\\b(return|break|case|continue|default|do|while|for|switch|if|else)\\b'
-        'name': 'keyword.control.haxe.flow-control.2'
-      }
-      {
-        'match': '\\.\\.\\.'
-        'name': 'keyword.control.directive.haxe'
-      }
-      # The following entries in patterns will not be reached because the above
-      # two handle the keywords below.
-      # if, else if, else
-      {
-        'match': '\\b(if|else if|else)\\b'
-        'name': 'keyword.control.conditional.haxe'
-      }
-      # try, throw, catch
-      {
-        'match': '\\b(try|throw|catch)\\b'
-        'name': 'keyword.control.try.haxe'
-      }
-      # switch, case, default
-      {
-        'match': '\\b(switch|case|default)\\b'
-        'name': 'keyword.control.switch.haxe'
-      }
-      # for, in, do, while, continue, break
-      {
-        'match': '\\b(for|in|\\.\\.\\.|do|while|continue|break)\\b'
-        'name': 'keyword.control.loop.haxe'
-      }
-      {
-        'match': '\\b(return)\\b'
-        'name': 'keyword.control.return.haxe'
-      }
-    ]
   'field-completions':
     'patterns': [
       {
@@ -353,7 +309,7 @@ Repository - A dictionary of includable patterns.
             'include': '#class-names'
           }
           {
-            'include': '#control-flow'
+            'include': '#keywords'
           }
           {
             'include': '#operators'
@@ -389,6 +345,54 @@ Repository - A dictionary of includable patterns.
       {
         'match': '\\b(function)\\b'
         'name': 'storage.type.function.haxe'
+      }
+    ]
+  # Keywords
+  'keywords':
+    'patterns': [
+      {
+        'captures':
+          '1':
+            'name': 'keyword.control.haxe.flow-control.2'
+        'match': '\\b(if|return|while|for)\\b\\s*\\('
+      }
+      {
+        'match': '\\b(return|break|case|continue|default|do|while|for|switch|if|else)\\b'
+        'name': 'keyword.control.haxe.flow-control.2'
+      }
+      {
+        'match': '\\.\\.\\.'
+        'name': 'keyword.control.directive.haxe'
+      }
+      {
+        'match': '\\b(this|super)\\b'
+        'name': 'variable.language.haxe'
+      }
+      # The following entries in patterns will not be reached because the above
+      # two handle the keywords below.
+      # if, else if, else
+      {
+        'match': '\\b(if|else if|else)\\b'
+        'name': 'keyword.control.conditional.haxe'
+      }
+      # try, throw, catch
+      {
+        'match': '\\b(try|throw|catch)\\b'
+        'name': 'keyword.control.try.haxe'
+      }
+      # switch, case, default
+      {
+        'match': '\\b(switch|case|default)\\b'
+        'name': 'keyword.control.switch.haxe'
+      }
+      # for, in, do, while, continue, break
+      {
+        'match': '\\b(for|in|\\.\\.\\.|do|while|continue|break)\\b'
+        'name': 'keyword.control.loop.haxe'
+      }
+      {
+        'match': '\\b(return)\\b'
+        'name': 'keyword.control.return.haxe'
       }
     ]
   # Operators
