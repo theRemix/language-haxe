@@ -572,6 +572,13 @@ Repository - A dictionary of includable patterns.
   # the programmer intends this to only be set once.
   'user-constants':
     'patterns': [
+      # Any amount of underscores is not necessarily intended as constant.
+      {
+        'match': '\\b(var)\\s+[_]+'
+        'captures':
+          '1':
+            'name': 'keyword.other.variable.haxe'
+      }
       {
         'match': '\\b(var)\\s+([A-Z_][A-Z0-9_]*)\\b'
         'captures':
@@ -579,6 +586,10 @@ Repository - A dictionary of includable patterns.
             'name': 'keyword.other.variable.haxe'
           '2':
             'name': 'constant.user-defined.haxe'
+      }
+      # Any amount of underscores is not necessarily intended as constant.
+      {
+        'match': '\\b[_]+\\b'
       }
       {
         'match': '\\b[A-Z_][A-Z0-9_]*\\b'
