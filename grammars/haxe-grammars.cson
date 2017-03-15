@@ -279,12 +279,12 @@ Repository - A dictionary of includable patterns.
   'field-completions':
     'patterns': [
       {
-        'begin': '\\.'
-        'end': '\\b'
+        'begin': '\\.(?=[A-Za-z_])'
+        'end': '(?<!\\.)\\b'
         'name': 'meta.scope.field-completions.haxe'
         'patterns': [
           {
-            'include': '#user-constants';
+            'include': '#user-constants'
           }
         ]
       }
@@ -316,6 +316,9 @@ Repository - A dictionary of includable patterns.
           }
           {
             'include': '#keywords'
+          }
+          {
+            'include': '#field-completions'
           }
         ]
       }
