@@ -81,3 +81,35 @@ describe "Haxe Grammar", ->
                 {tokens} = grammar.tokenizeLine('a.push(' + delim + 'x' + delim + ' + y + ' + delim + ':function()' + delim + ');')
                 expect(tokens[0]).toEqual value: 'a', scopes: ['source.haxe'] #,'meta.scope.field-completions.haxe']
                 #expect(tokens[1]).toEqual value: '.', scopes: ['source.haxe']
+
+    describe "firstLineMatch", ->
+        it "recognises interpreter directives", ->
+            valid = """
+                #!/usr/sbin/haxe
+                #!/usr/bin/haxe foo=bar/
+                #!/usr/sbin/haxe
+                #!/usr/sbin/haxe foo bar baz
+                #!/usr/bin/haxe perl
+                #!/usr/bin/haxe bin/perl
+                #!/usr/bin/haxe
+                #!/bin/haxe
+                #!/usr/bin/haxe --script=usr/bin
+                #! /usr/bin/env A=003 B=149 C=150 D=xzd E=base64 F=tar G=gz H=head I=tail haxe
+                #!\t/usr/bin/env --foo=bar haxe --quu=quux
+                #! /usr/bin/haxe
+                #!/usr/bin/env haxe
+            """
+            for line in valid.split /\n/
+                expect( grammar.firstLineRegex.scanner.findNextMatchSync( line ) ).not.toBeNull()
+            invalid = """
+                \x20#!/usr/sbin/haxe
+                \t#!/usr/sbin/haxe
+                #!/usr/bin/env-haxe/node-env/
+                #!/usr/bin/env-haxe
+                #! /usr/binhaxe
+                #!\t/usr/bin/env --haxe=bar
+            """
+            for line in invalid.split /\n/
+                expect( grammar.firstLineRegex.scanner.findNextMatchSync( line ) ).toBeNull()
+        #it "recognises Emacs modelines", ->
+        #it "recognises Vim modelines", ->

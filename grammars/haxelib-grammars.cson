@@ -1,0 +1,6 @@
+'scopeName': 'source.haxelib'
+'fileTypes': ['json']
+'name': 'haxelib'
+'patterns': [
+	{ 'include': 'source.json' }
+]
