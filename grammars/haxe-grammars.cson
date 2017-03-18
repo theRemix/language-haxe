@@ -577,7 +577,7 @@ Repository - A dictionary of includable patterns.
     'patterns': [
       # Any amount of underscores is not necessarily intended as constant.
       {
-        'match': '\\b(var)\\s+[_]+'
+        'match': '\\b(var)\\s+[_]+\\b'
         'captures':
           '1':
             'name': 'keyword.other.variable.haxe'
