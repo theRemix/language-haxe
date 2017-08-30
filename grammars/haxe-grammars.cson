@@ -354,10 +354,10 @@
         'captures':
           '1':
             'name': 'keyword.control.directive.conditional.haxe'
-        'match': '(#if\\s+([\\!\\w]+|(\\([^\\)]*\\))))'
+        'match': '((\\s)*#if\\s+([\\!\\w]+|(\\([^\\)]*\\))))'
       }
       {
-        'match': '(#end|#else|#elseif)\\b'
+        'match': '(\\s)*(#end|#else|#elseif)\\b'
         'name': 'keyword.control.directive.conditional.haxe'
       }
       {

@@ -31,7 +31,7 @@ describe "Haxe Grammar", ->
         expect(grammar.fileTypes[0]).toBe "hx"
 
     describe "keywords", ->
-        keywords = ['abstract','break','case','cast','catch','class','continue','default','do','dynamic','else','enum','extern','false','for','function','if','implements','in','inline','interface','never','new','override','package','private','public','return','static','super','this','trace','true','try','typedef','untyped','using','while']
+        keywords = ['abstract','break','case','cast','catch','class','continue','default','do','dynamic','#else','else','#elseif','#end','enum','extern','false','for','function','#if','if','implements','in','inline','interface','never','new','override','package','private','public','return','static','super','this','trace','true','try','typedef','untyped','using','while']
         for keyword in keywords
             it "tokenizes the #{keyword} keyword", ->
                 {tokens} = grammar.tokenizeLine(keyword)
@@ -111,5 +111,3 @@ describe "Haxe Grammar", ->
             """
             for line in invalid.split /\n/
                 expect( grammar.firstLineRegex.scanner.findNextMatchSync( line ) ).toBeNull()
-        #it "recognises Emacs modelines", ->
-        #it "recognises Vim modelines", ->
